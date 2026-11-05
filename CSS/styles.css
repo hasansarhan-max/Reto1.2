@@ -1,0 +1,40 @@
+/* Contenedor principal de la barra */
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px; /* Controla el ancho máximo de la barra */
+  border: 1px solid #ccc;
+  border-radius: 50px; /* Hace la barra totalmente redondeada */
+  padding: 5px 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Suave sombra */
+}
+
+/* El campo de texto donde escribe el usuario */
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none; /* Quita el borde azul por defecto al hacer click */
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* El botón que contiene la lupa */
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  transition: color 0.2s ease;
+}
+
+/* Efecto al pasar el ratón por encima de la lupa */
+.search-button:hover {
+  color: #000;
+}
