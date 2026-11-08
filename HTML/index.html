@@ -1,63 +1,84 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>PlayMarket</title>
-			<link rel="stylesheet" type="text/css" href="../CSS/styles.css">
-			
-			<link rel="icon" type="image/png" href="../Imagenes/icono.png">
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<meta charset="UTF-8">
-		</head>
-			
-		<body>
-			<header class="header">
-    <nav class="navbar">
-      <div class="logo">PlayMarket</div>
-      <ul class="menu">
-        <li><a style="color: blanchedalmond;" href="index.html">Inicio</a></li>
-        <li><a href="conocenos.html">Conocenos</a></li>
-        <li><a href="conciertos.html">Conciertos</a></li>
-        <li><a href="fotos.html">Galería</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="merch.html" class="btn">Merch</a></li>
-      </ul>
-    </nav>
-		</header>
-		<footer>
-			<section class="redes-sociales">
-    <h3>Síguenos en nuestras redes</h3>
-    <div class="contenedor-iconos">
-      <a href="https://instagram.com/the_rp_s" target="_blank" class="red-link">
-        <i class="fab fa-instagram"></i> Instagram
-      </a>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PlayMarket - Gestión de Videojuegos</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">PlayMarket</div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#productos">Productos ▾</a>
+                    <ul class="submenu">
+                        <li><a href="#fisicos">Videojuegos Físicos</a></li>
+                        <li><a href="#digitales">Códigos Digitales</a></li>
+                        <li><a href="#consolas">Consolas</a></li>
+                        <li><a href="#accesorios">Accesorios</a></li>
+                    </ul>
+                </li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      <a href="https://www.tiktok.com/@the_rp_s" target="_blank" class="red-link">
-        <i class="fab fa-tiktok"></i> TikTok
-      </a>
+    <main>
+        
+        <section id="inicio" class="hero">
+            <h1>Bienvenido a PlayMarket</h1>
+            <p>Tu base de datos y tienda de confianza para la gestión de videojuegos, consolas y accesorios.</p>
+            <a href="#productos" class="btn">Ver Catálogo</a>
+        </section>
 
-      <a href="https://www.youtube.com/@Renpalagoak" target="_blank" class="red-link">
-        <i class="fab fa-youtube"></i> YouTube
-      </a>
+        <section id="productos">
+            <h2>Catálogo de Productos</h2>
+            
+            <div class="contenedor-cards">
+                
+                <article class="card">
+                    <span class="badge fisico">Físico</span>
+                    <h3>Grand Theft Auto VI</h3>
+                    <p class="plataforma">PlayStation 5</p>
+                    <p class="precio">79.99 €</p>
+                    <button>Añadir al carro</button>
+                </article>
 
-      <a href="https://www.facebook.com/profile.php?id=61555037274099&sk=photos" target="_blank" class="red-link">
-        <i class="fab fa-facebook"></i> Facebook
-      </a>
+                <article class="card">
+                    <span class="badge digital">Digital</span>
+                    <h3>Minecraft Key</h3>
+                    <p class="plataforma">Xbox Series X</p>
+                    <p class="precio">29.99 €</p>
+                    <button>Añadir al carro</button>
+                </article>
 
-      <a href="https://x.com/renpalagoak" target="_blank" class="red-link">
-        <i class="fab fa-twitter"></i> X
-      </a>
+                <article class="card">
+                    <span class="badge consola">Consola</span>
+                    <h3>Nintendo Switch OLED</h3>
+                    <p class="plataforma">Nintendo</p>
+                    <p class="precio">349.99 €</p>
+                    <button>Añadir al carro</button>
+                </article>
 
-    </div>
-    <div id="pie-pagina" style="margin-top: 20px;">
-      <p>&copy; 2022 Renpalagoak / The RP's. Todos los derechos reservados.</p>
-      <p style="margin-top: 10px;">
-        <a href="../Politicas/aviso-legal.txt" target="_blank" style="color: beige;">Aviso Legal</a> |
-        <a href="../Politicas/politica-privacidad.txt" target="_blank" style="color: beige;">Política de Privacidad</a> |
-        <a href="../Politicas/politica-cookies.txt" target="_blank" style="color: beige;">Política de Cookies</a>
-      </p>
-    </div>
-  </section>
-		</footer>
-		</body>
-		
-	</html>
+                <article class="card">
+                    <span class="badge accesorio">Accesorio</span>
+                    <h3>Mando DualSense </h3>
+                    <p class="plataforma">PlayStation 5</p>
+                    <p class="precio">74.99 €</p>
+                    <button>Añadir al carro</button>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p></p>
+    </footer>
+
+</body>
+</html>
