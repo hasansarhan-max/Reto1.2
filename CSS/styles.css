@@ -70,7 +70,12 @@ nav a:hover {
 .dropdown:hover .submenu {
     display: flex; 
 }
+.video {
+    border: 2px solid #2563eb;
+    display: flex;
+    
 
+}
 
 .hero {
     text-align: center;
@@ -90,6 +95,9 @@ nav a:hover {
     margin-bottom: 1.5rem;
 }
 
+.destacado {
+background-color: red;	
+	}
 .btn {
     background-color: #2563eb;
     color: white;
@@ -132,8 +140,9 @@ nav a:hover {
     flex: 1 1 220px; 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-end;
     position: relative;
+	border: 1px solid red;
 }
 
 .card h3 {
@@ -186,7 +195,7 @@ nav a:hover {
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 1.5rem;
+    padding: 1.5 rem;
     background-color: #121c3b;
     border-top: 1px solid #1e3a8a;
     color: #64748b;
