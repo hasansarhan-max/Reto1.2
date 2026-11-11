@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PlayMarket</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>PlayMarket - Gestión de Videojuegos</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
 </head>
 <body>
     <header>
-        <a class="logo" href="#destacados"><img src="logo.png" alt="PlayMarket"></a>
+        <a class="logo" href="#destacados"><img src="../IMG/logo.png" alt="PlayMarket"></a>
         <nav>
             <ul>
                 <li><a href="#destacados">Inicio</a></li>
@@ -34,68 +34,46 @@
             <h2>Destacados</h2>
 
             <div class="carrusel">
-                <input type="radio" name="carrusel" id="s1" class="radio-slide" checked>
-                <input type="radio" name="carrusel" id="s2" class="radio-slide">
-                <input type="radio" name="carrusel" id="s3" class="radio-slide">
-                <input type="radio" name="carrusel" id="s4" class="radio-slide">
-
-                <div class="slides">
-                    <article class="slide">
-                        <img class="slide-img" src="../IMG/gta6.jpg" alt="Grand Theft Auto VI">
-                        <div class="slide-texto">
-                            <span class="badge-inline fisico">Físico</span>
-                            <h3>Grand Theft Auto VI</h3>
-                            <p class="plataforma">PlayStation 5</p>
-                            <p class="precio">79.99 €</p>
-                            <button>Añadir al carro</button>
-                        </div>
-                        <label class="flecha izq" for="s4" aria-label="Anterior">&#10094;</label>
-                        <label class="flecha der" for="s2" aria-label="Siguiente">&#10095;</label>
-                    </article>
-                    <article class="slide">
-                        <img class="slide-img" src="../IMG/minecraft.jpg" alt="Minecraft Key">
-                        <div class="slide-texto">
-                            <span class="badge-inline digital">Digital</span>
-                            <h3>Minecraft Key</h3>
-                            <p class="plataforma">Xbox Series X</p>
-                            <p class="precio">29.99 €</p>
-                            <button>Añadir al carro</button>
-                        </div>
-                        <label class="flecha izq" for="s1" aria-label="Anterior">&#10094;</label>
-                        <label class="flecha der" for="s3" aria-label="Siguiente">&#10095;</label>
-                    </article>
-                    <article class="slide">
-                        <img class="slide-img" src="../IMG/switch.jpg" alt="Nintendo Switch OLED">
-                        <div class="slide-texto">
-                            <span class="badge-inline consola">Consola</span>
-                            <h3>Nintendo Switch OLED</h3>
-                            <p class="plataforma">Nintendo</p>
-                            <p class="precio">349.99 €</p>
-                            <button>Añadir al carro</button>
-                        </div>
-                        <label class="flecha izq" for="s2" aria-label="Anterior">&#10094;</label>
-                        <label class="flecha der" for="s4" aria-label="Siguiente">&#10095;</label>
-                    </article>
-                    <article class="slide">
-                        <img class="slide-img" src="../IMG/dualsense.jpg" alt="Mando DualSense">
-                        <div class="slide-texto">
-                            <span class="badge-inline accesorio">Accesorio</span>
-                            <h3>Mando DualSense</h3>
-                            <p class="plataforma">PlayStation 5</p>
-                            <p class="precio">74.99 €</p>
-                            <button>Añadir al carro</button>
-                        </div>
-                        <label class="flecha izq" for="s3" aria-label="Anterior">&#10094;</label>
-                        <label class="flecha der" for="s1" aria-label="Siguiente">&#10095;</label>
-                    </article>
-                </div>
-
-                <div class="puntos">
-                    <label for="s1" aria-label="Ir al destacado 1"></label>
-                    <label for="s2" aria-label="Ir al destacado 2"></label>
-                    <label for="s3" aria-label="Ir al destacado 3"></label>
-                    <label for="s4" aria-label="Ir al destacado 4"></label>
-                </div>
+                <article class="slide">
+                    <img class="slide-img" src="../IMG/gta6.jpg" alt="Grand Theft Auto VI">
+                    <div class="slide-texto">
+                        <span class="badge-inline fisico">Físico</span>
+                        <h3>Grand Theft Auto VI</h3>
+                        <p class="plataforma">PlayStation 5</p>
+                        <p class="precio">79.99 €</p>
+                        <button>Añadir al carro</button>
+                    </div>
+                </article>
+                <article class="slide">
+                    <img class="slide-img" src="../IMG/minecraft.jpg" alt="Minecraft Key">
+                    <div class="slide-texto">
+                        <span class="badge-inline digital">Digital</span>
+                        <h3>Minecraft Key</h3>
+                        <p class="plataforma">Xbox Series X</p>
+                        <p class="precio">29.99 €</p>
+                        <button>Añadir al carro</button>
+                    </div>
+                </article>
+                <article class="slide">
+                    <img class="slide-img" src="../IMG/switch.jpg" alt="Nintendo Switch OLED">
+                    <div class="slide-texto">
+                        <span class="badge-inline consola">Consola</span>
+                        <h3>Nintendo Switch OLED</h3>
+                        <p class="plataforma">Nintendo</p>
+                        <p class="precio">349.99 €</p>
+                        <button>Añadir al carro</button>
+                    </div>
+                </article>
+                <article class="slide">
+                    <img class="slide-img" src="../IMG/dualsense.jpg" alt="Mando DualSense">
+                    <div class="slide-texto">
+                        <span class="badge-inline accesorio">Accesorio</span>
+                        <h3>Mando DualSense</h3>
+                        <p class="plataforma">PlayStation 5</p>
+                        <p class="precio">74.99 €</p>
+                        <button>Añadir al carro</button>
+                    </div>
+                </article>
             </div>
         </section>
 
@@ -159,8 +137,11 @@
     </main>
 
     <footer id="contacto">
-        <p> Todos los derechos reservados.</p>
+        <p>&copy; 2026 PlayMarket. Todos los derechos reservados.</p>
     </footer>
+
+</body>
+</html>
 
 </body>
 </html>
