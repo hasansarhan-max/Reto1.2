@@ -139,15 +139,21 @@ background-color: red;
     padding: 1.5rem;
     flex: 1 1 220px; 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-end;
     position: relative;
 	border: 1px solid red;
-}
-
+	margin-bottom: 5px;
+	}
 .card h3 {
     margin-top: 1rem;
+	margin-right: 1rem;
     font-size: 1.2rem;
+}
+
+.fotos {
+	width: 5px;
+	border: 5px;
 }
 
 .plataforma {
