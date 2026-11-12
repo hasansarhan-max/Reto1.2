@@ -117,9 +117,214 @@
 
 .producto {
     background-color: #121c3b;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f5f9;
+    color: #0f172a;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* ENCABEZADO */
+header {
+    background-color: #081c3a;
+    border-bottom: 3px solid #f07a1f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 2rem;
+}
+
+.logo {
+    display: block;
+    line-height: 0;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+    display: block;
+    /* un halo claro suave para que el azul del logo se lea sobre el fondo oscuro */
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.35));
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #f9a03f;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    background-color: #081c3a;
+    border: 1px solid #f07a1f;
+    list-style: none;
+    flex-direction: column;
+    width: 180px;
+    padding: 0.5rem 0;
+}
+
+.submenu li {
+    padding: 0.5rem 1rem;
+}
+
+.dropdown:hover .submenu {
+    display: flex;
+}
+
+/* TÍTULOS DE SECCIÓN */
+#destacados,
+#tienda {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 2rem 2rem 0;
+}
+
+#destacados h2,
+#tienda h2 {
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #2563eb;
+}
+
+/* DESTACADOS: banner con los destacados en fila */
+.carrusel {
+    display: flex;
+    width: 100%;
+    height: 460px;
+    border: 2px solid #2563eb;
     border-radius: 8px;
-    padding: 1.5rem;
-    flex: 1 1 220px; 
+    overflow-x: auto;      /* se desliza de lado a lado */
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    background-color: #ffffff;
+}
+
+.slide {
+    position: relative;
+    flex: 0 0 100%;        /* cada destacado ocupa todo el ancho */
+    height: 100%;
+    scroll-snap-align: start;
+}
+
+.slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+}
+
+.slide::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 40%, rgba(255,255,255,0) 75%);
+}
+
+.slide-texto {
+    position: absolute;
+    z-index: 2;
+    left: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.slide-texto h3 {
+    font-size: 2.6rem;
+    line-height: 1.15;
+    margin: 0.6rem 0;
+    color: #0f172a;
+}
+
+.slide-texto .precio {
+    font-size: 2rem;
+}
+
+.slide-texto button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.slide-texto button:hover {
+    background-color: #1d4ed8;
+}
+
+.badge-inline {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* TIENDA: cada producto es un recuadro alargado */
+.card {
+    background-color: #ffffff;
+    border: 2px solid #2563eb;
+    border-radius: 8px;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-larga {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.card-larga .card-img {
+    width: 200px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 6px;
+    background-color: #dbeafe;
+    flex-shrink: 0;
+}
+
+.card-info {
+    flex: 1;
+}
+
+.card-compra {
     display: flex;
     flex-direction: row;
     justify-content: space-end;
@@ -129,11 +334,22 @@
 
 .producto h3 {
     margin-top: 1rem;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.card-compra .precio {
+    margin-bottom: 0;
+}
+
+.card h3 {
+    margin: 0.4rem 0;
     font-size: 1.2rem;
 }
 
 .plataforma {
-    color: #94a3b8;
+    color: #64748b;
     font-size: 0.9rem;
     margin-bottom: 1rem;
 }
@@ -141,7 +357,7 @@
 .precio {
     font-size: 1.3rem;
     font-weight: bold;
-    color: #38bdf8;
+    color: #1d4ed8;
     margin-bottom: 1rem;
 }
 
@@ -151,7 +367,7 @@
 	
     color: white;
     border: none;
-    padding: 0.5rem;
+    padding: 0.5rem 1.2rem;
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
@@ -162,6 +378,8 @@
 }
 
 .tipo {
+/* ETIQUETAS */
+.badge {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -172,3 +390,68 @@
 }
 
 .tipo.fisico { background-color: #2563eb; }
+.fisico    { background-color: #2563eb; }
+.digital   { background-color: #059669; }
+.consola   { background-color: #d97706; }
+.accesorio { background-color: #7c3aed; }
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #081c3a;
+    border-top: 3px solid #f07a1f;
+    color: #cbd5e1;
+    margin-top: 3rem;
+}
+
+/* MÓVIL */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .logo img {
+        height: 64px;
+    }
+
+    .card-larga {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card-larga .card-img {
+        width: 100%;
+        height: 160px;
+    }
+
+    .card-compra {
+        align-items: flex-start;
+    }
+
+    .carrusel {
+        height: 380px;
+    }
+
+    .slide-texto {
+        left: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .slide-texto h3 {
+        font-size: 1.7rem;
+    }
+}
+
+/* texto blanco sobre las etiquetas de color */
+.badge,
+.badge-inline {
+    color: #ffffff;
+}
+
+/* sombra suave para separar los recuadros del fondo claro */
+.carrusel,
+.card {
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
