@@ -9,12 +9,15 @@
 </head>
 
 <body>
-    <header>
-        <div class="logo"> <img class="logo" src="../Imagenes/icono.png" alt="Grand Theft Auto VI">PlayMarket</div>
+    <header id="inicio">
+        <div class="logo">
+            <img src="../Imagenes/icono.png" alt="Logo PlayMarket">
+            <span>PlayMarket</span>
+        </div>
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
-                <li class="dropdown">
+                <li class="desplegable">
                     <a href="#productos">Productos ▾</a>
                     <ul class="submenu">
                         <li><a href="#fisicos">Videojuegos Físicos</a></li>
@@ -23,196 +26,158 @@
                         <li><a href="#accesorios">Accesorios</a></li>
                     </ul>
                 </li>
-                <li><a href="reserva.html" >Reservas</a></li>
+                <li><a href="reserva.html">Reservas</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- DESTACADOS -->
         <section id="destacados">
             <h2>Destacados</h2>
 
-            <div class="carrusel">
-                <article class="slide">
-
-                    <img class="slide-img" src="../Imagenes/gta6.jpg" alt="Grand Theft Auto VI">
-                    <div class="slide-texto">
-                        <span class="badge-inline fisico">Físico</span>
-                        <h3>Grand Theft Auto VI</h3>
-                        <p class="plataforma">PlayStation 5</p>
-                        <p class="precio">79.99 €</p>
-                        <button>Reservar</button>
-                    </div>
-                </article>
-                <article class="slide">
-                    <img class="slide-img" src="../IMG/minecraft.jpg" alt="Minecraft Key">
-                    <div class="slide-texto">
-                        <span class="badge-inline digital">Digital</span>
-                        <h3>Minecraft Key</h3>
-                        <p class="plataforma">Xbox Series X</p>
-                        <p class="precio">29.99 €</p>
-                        <button>Añadir al carro</button>
-                    </div>
-                </article>
-                <article class="slide">
-                    <img class="slide-img" src="../IMG/switch.jpg" alt="Nintendo Switch OLED">
-                    <div class="slide-texto">
-                        <span class="badge-inline consola">Consola</span>
-                        <h3>Nintendo Switch OLED</h3>
-                        <p class="plataforma">Nintendo</p>
-                        <p class="precio">349.99 €</p>
-                        <button>Añadir al carro</button>
-                    </div>
-                </article>
-                <article class="slide">
-                    <img class="slide-img" src="../IMG/dualsense.jpg" alt="Mando DualSense">
-                    <div class="slide-texto">
-                        <span class="badge-inline accesorio">Accesorio</span>
-                        <h3>Mando DualSense</h3>
-                        <p class="plataforma">PlayStation 5</p>
-                        <p class="precio">74.99 €</p>
-                        <button>Añadir al carro</button>
-                    </div>
-                </article>
+<div class="carrusel">
+    <div class="pista-carrusel">
+        <!-- DIAPOSITIVA 1 -->
+        <article class="diapositiva">
+            <img class="fondo-destacado" src="../Imagenes/gta6.jpg" alt="Grand Theft Auto VI">
+            <div class="texto-destacado">
+                <h3>Grand Theft Auto VI</h3>
+                <p class="plataforma">PlayStation 5</p>
+                <p class="precio">79.99 €</p>
             </div>
+        </article>
+
+        <!-- DIAPOSITIVA 2 -->
+        <article class="diapositiva">
+            <img class="fondo-destacado" src="../Imagenes/hollow.avif" alt="Hollow Knight">
+            <div class="texto-destacado">
+                <h3>Hollow Knight</h3>
+                <p class="plataforma">Xbox Series X / PlayStation 5</p>
+                <p class="precio">29.99 €</p>
+            </div>
+        </article>
+
+        <!-- DIAPOSITIVA 3 -->
+        <article class="diapositiva">
+            <img class="fondo-destacado" src="../Imagenes/nintendooled.jpg" alt="Nintendo Switch OLED">
+            <div class="texto-destacado">
+                <h3>Nintendo Switch OLED</h3>
+                <p class="plataforma">Nintendo</p>
+                <p class="precio">349.99 €</p>
+            </div>
+        </article>
+
+        <!-- DIAPOSITIVA 4 -->
+        <article class="diapositiva">
+            <img class="fondo-destacado" src="../Imagenes/dualsense.jpg" alt="Mando DualSense">
+            <div class="texto-destacado">
+                <h3>Mando DualSense</h3>
+                <p class="plataforma">PlayStation 5</p>
+                <p class="precio">74.99 €</p>
+            </div>
+        </article>
+    </div>
+</div>
         </section>
 
         <section id="productos">
             <h2>Catálogo de Productos</h2>
 
-            <div class="contenedor-producto">
+            <div class="lista-productos">
+                <section id="tienda">
+                    <h2>Consolas</h2>
 
+                    <article class="tarjeta producto-fila" id="consolas">
+                        <img class="foto-producto" src="../Imagenes/ps5.png" alt="PlayStation 5">
+                        <div class="datos-producto">
+                            <span class="etiqueta consola">Consola</span>
+                            <h3>PlayStation 5</h3>
+                            <p class="plataforma">Sony</p>
+                        </div>
+                        <div class="zona-compra">
+                            <p class="precio">499.99 €</p>
+                            <button>Añadir al carro</button>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta producto-fila">
+                        <img class="foto-producto" src="../Imagenes/ps5pro.jpg" alt="PlayStation 5 Pro">
+                        <div class="datos-producto">
+                            <span class="etiqueta consola">Consola</span>
+                            <h3>PlayStation 5 Pro</h3>
+                            <p class="plataforma">Sony</p>
+                        </div>
+                        <div class="zona-compra">
+                            <p class="precio">599.00 €</p>
+                            <button>Añadir al carro</button>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta producto-fila">
+                        <img class="foto-producto" src="../Imagenes/xboxseriesx.webp" alt="Xbox Series X">
+                        <div class="datos-producto">
+                            <span class="etiqueta consola">Consola</span>
+                            <h3>Xbox Series X</h3>
+                            <p class="plataforma">Microsoft</p>
+                        </div>
+                        <div class="zona-compra">
+                            <p class="precio">349.99 €</p>
+                            <button>Añadir al carro</button>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta producto-fila">
+                        <img class="foto-producto" src="../Imagenes/nintendoled.avif" alt="Nintendo Switch OLED">
+                        <div class="datos-producto">
+                            <span class="etiqueta consola">Consola</span>
+                            <h3>Nintendo Switch OLED</h3>
+                            <p class="plataforma">Nintendo</p>
+                        </div>
+                        <div class="zona-compra">
+                            <p class="precio">349.99 €</p>
+                            <button>Añadir al carro</button>
+                        </div>
+                    </article>
+						<section id="tienda">
+							<h2>Juegos Fisicos</h2>
+					
+                    <article class="tarjeta producto-fila" id="fisicos">
+                        <img class="foto-producto" src="../Imagenes/gta6disco.webp" alt="Grand Theft Auto VI">
+                        <div class="datos-producto">
+                            <span class="etiqueta fisico">Físico</span>
+                            <h3>Grand Theft Auto VI</h3>
+                            <p class="plataforma">PlayStation 5</p>
+                        </div>
+                        <div class="zona-compra">
+                            <p class="precio">79.99 €</p>
+                            <button>Añadir al carro</button>
+                        </div>
+                    </article>
+					
+						<section id="tienda">
+							<h2>Claves Digitales</h2>
+							
+                    <article class="tarjeta producto-fila" id="digitales">
+                        <img class="foto-producto" src="../IMG/minecraft.jpg" alt="Minecraft Key">
+                        <div class="datos-producto">
+                            <span class="etiqueta digital">Digital</span>
+                            <h3>Minecraft Key</h3>
+                            <p class="plataforma">Xbox Series X</p>
+                        </div>
+                        <div class="zona-compra">
+                            <p class="precio">29.99 €</p>
+                            <button>Añadir al carro</button>
+                        </div>
+                    </article>
+                </section>
             </div>
-            <!-- TIENDA -->
-            <section id="tienda">
-                <h2> Consolas</h2>
-
-                <article class="card card-larga" id="consolas">
-                    <img class="card-img" src="../Imagenes/ps5.png" alt="Playstation 5">
-                    <div class="card-info">
-                        <span class="badge-inline consola">Consola</span>
-                        <h3>Playstation 5 </h3>
-                        <p class="plataforma">Sony</p>
-                    </div>
-                    <div class="card-compra">
-                        <p class="precio">499.99 €</p>
-                        <button>Añadir al carro</button>
-                    </div>
-                </article>
-
-                <article class="card card-larga" id="consolas">
-                    <img class="card-img" src="../Imagenes/nintendooled.jpg" alt="Nintendo Switch OLED">
-                    <div class="card-info">
-                        <span class="badge-inline consola">Consola</span>
-                        <h3>Playstation 5 Pro</h3>
-                        <p class="plataforma">Sony</p>
-                    </div>
-                    <div class="card-compra">
-                        <p class="precio">599.00 €</p>
-                        <button>Añadir al carro</button>
-                    </div>
-                </article>
-
-                <article class="card card-larga" id="consolas">
-                    <img class="card-img" src="../Imagenes/xbox.png" alt="Xbox One Series X">
-                    <div class="card-info">
-                        <span class="badge-inline consola">Consola</span>
-                        <h3>Xbox One Series X</h3>
-                        <p class="plataforma">Microsoft</p>
-                    </div>
-                    <div class="card-compra">
-                        <p class="precio">349.99 €</p>
-                        <button>Añadir al carro</button>
-                    </div>
-                </article>
-
-                <article class="card card-larga" id="consolas">
-                    <img class="card-img" src="../IMG/switch.jpg" alt="Nintendo Switch OLED">
-                    <div class="card-info">
-                        <span class="badge-inline consola">Consola</span>
-                        <h3>Nintendo Switch OLED</h3>
-                        <p class="plataforma">Nintendo</p>
-                    </div>
-                    <div class="card-compra">
-                        <p class="precio">349.99 €</p>
-                        <button>Añadir al carro</button>
-                    </div>
-                </article>
-
-                <article class="card card-larga" id="consolas">
-                    <img class="card-img" src="../IMG/switch.jpg" alt="Nintendo Switch OLED">
-                    <div class="card-info">
-                        <span class="badge-inline consola">Consola</span>
-                        <h3>Nintendo Switch OLED</h3>
-                        <p class="plataforma">Nintendo</p>
-                    </div>
-                    <div class="card-compra">
-                        <p class="precio">349.99 €</p>
-                        <button>Añadir al carro</button>
-                    </div>
-                </article>
-
-                <article class="card card-larga" id="fisicos">
-                    <img class="card-img" src="../Imagenes/gta6disco.webp" alt="Grand Theft Auto VI">
-                    <div class="card-info">
-                        <span class="badge-inline fisico">Físico</span>
-                        <h3>Grand Theft Auto VI</h3>
-                        <p class="plataforma">PlayStation 5</p>
-                    </div>
-                    <div class="card-compra">
-                        <p class="precio">79.99 €</p>
-                        <button>Añadir al carro</button>
-                    </div>
-                </article>
-
-                <article class="card card-larga" id="digitales">
-                    <img class="card-img" src="../IMG/minecraft.jpg" alt="Minecraft Key">
-                    <div class="card-info">
-                        <span class="badge-inline digital">Digital</span>
-                        <h3>Minecraft Key</h3>
-                        <p class="plataforma">Xbox Series X</p>
-                    </div>
-                    <div class="card-compra">
-                        <p class="precio">29.99 €</p>
-                        <button>Añadir al carro</button>
-                    </div>
-                </article>
-
-                <article class="card card-larga" id="consolas">
-                    <img class="card-img" src="../IMG/switch.jpg" alt="Nintendo Switch OLED">
-                    <div class="card-info">
-                        <span class="badge-inline consola">Consola</span>
-                        <h3>Nintendo Switch OLED</h3>
-                        <p class="plataforma">Nintendo</p>
-                    </div>
-                    <div class="card-compra">
-                        <p class="precio">349.99 €</p>
-                        <button>Añadir al carro</button>
-                    </div>
-                </article>
-
-                <article class="card card-larga" id="accesorios">
-                    <img class="card-img" src="../IMG/dualsense.jpg" alt="Mando DualSense">
-                    <div class="card-info">
-                        <span class="badge-inline accesorio">Accesorio</span>
-                        <h3>Mando DualSense</h3>
-                        <p class="plataforma">PlayStation 5</p>
-                    </div>
-                    <div class="card-compra">
-                        <p class="precio">74.99 €</p>
-                        <button>Añadir al carro</button>
-                    </div>
-                </article>
-            </section>
-
+        </section>
     </main>
 
     <footer id="contacto">
-        <p> &copy; 2026 PlayMarket. Todos los derechos reservados.</p>
+        <p>&copy; 2026 PlayMarket - Todos los derechos reservados.</p>
     </footer>
-
 </body>
 
 </html>

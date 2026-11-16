@@ -11,7 +11,7 @@ body {
     line-height: 1.6;
 }
 
-/* ENCABEZADO */
+/* CABECERA */
 header {
     background-color: #081c3a;
     border-bottom: 3px solid #f07a1f;
@@ -22,8 +22,12 @@ header {
 }
 
 .logo {
-    display: block;
-    line-height: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.4rem;
 }
 
 .logo img {
@@ -50,7 +54,7 @@ nav a:hover {
     color: #f9a03f;
 }
 
-.dropdown {
+.desplegable {
     position: relative;
 }
 
@@ -72,64 +76,71 @@ nav a:hover {
     padding: 0.5rem 1rem;
 }
 
-.dropdown:hover .submenu {
+.desplegable:hover .submenu {
     display: flex;
 }
 
-/* TÍTULOS DE SECCIÓN */
+/* SECCIONES */
 #destacados,
-#tienda {
+#productos {
     width: 100%;
-    max-width: none;
-    margin: 0;
     padding: 2rem 2rem 0;
 }
 
+#tienda {
+    width: 100%;
+    padding-top: 1rem;
+}
+
 #destacados h2,
+#productos h2,
 #tienda h2 {
     margin-bottom: 1.2rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid #2563eb;
 }
 
-/* DESTACADOS: banner con los destacados en fila */
-.carrusel {
+/* CARRUSEL */
+.pista-carrusel {
     display: flex;
-    width: 100%;
-    height: 460px;
-    border: 2px solid #2563eb;
-    border-radius: 8px;
-    overflow-x: auto;      /* se desliza de lado a lado */
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    background-color: #ffffff;
-}
-
-.slide {
-    position: relative;
-    flex: 0 0 100%;        /* cada destacado ocupa todo el ancho */
+    width: 400%;               /* 100% por cada una de las 4 diapositivas */
     height: 100%;
-    scroll-snap-align: start;
+    animation: moverCarrusel 24s infinite ease-in-out;
 }
 
-.slide-img {
-    width: 100%;
-    height: 100%; /* Pon aquí la altura exacta que tiene tu banner/carrusel */
-    display: block;
-    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+.carrusel:hover .pista-carrusel {
+    animation-play-state: paused;
 }
 
-.slide::after {
+.diapositiva {
+    position: relative;
+    width: 25%;                /* Cada diapositiva ocupa una cuarta parte del 400% (es decir, el 100% visible) */
+    height: 100%;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+@keyframes moverCarrusel {
+    0%, 20%   { transform: translateX(0%); }     /* Muestra la 1ª foto a pantalla completa */
+    25%, 45%  { transform: translateX(-25%); }   /* Muestra la 2ª foto a pantalla completa */
+    50%, 70%  { transform: translateX(-50%); }   /* Muestra la 3ª foto a pantalla completa */
+    75%, 95%  { transform: translateX(-75%); }   /* Muestra la 4ª foto a pantalla completa */
+    100%      { transform: translateX(0%); }
+}
+
+
+.diapositiva::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 1;
     background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 40%, rgba(255,255,255,0) 75%);
 }
 
-.slide-texto {
+.texto-destacado {
     position: absolute;
     z-index: 2;
     left: 4rem;
@@ -141,111 +152,64 @@ nav a:hover {
     align-items: flex-start;
 }
 
-.slide-texto h3 {
+.texto-destacado h3 {
     font-size: 2.6rem;
     line-height: 1.15;
     margin: 0.6rem 0;
     color: #0f172a;
 }
 
-.slide-texto .precio {
+.texto-destacado .precio {
     font-size: 2rem;
 }
 
-.slide-texto button {
-    background-color: #2563eb;
-    color: white;
-    border: none;
-    padding: 0.8rem 2rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1rem;
-}
-
-.slide-texto button:hover {
-    background-color: #1d4ed8;
-}
-
-.badge-inline {
-    font-size: 0.75rem;
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
-    font-weight: bold;
-}
-
-/* TIENDA: cada producto es un recuadro alargado */
-.card {
+/* TARJETAS */
+.tarjeta {
     background-color: #ffffff;
     border: 2px solid #2563eb;
     border-radius: 8px;
     padding: 1.2rem 1.5rem;
     margin-bottom: 1.5rem;
-	height: 220px; /* ¡Obligatorio para que object-fit funcione bien! */
-  width: 100%;
+    height: 220px;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
 }
 
-.card-larga {
+.producto-fila {
     display: flex;
     align-items: center;
     gap: 1.5rem;
     width: 100%;
 }
 
-.card-larga .card-img {
-    height: 200px;
-	 width: 200px;
-    object-fit: cover;
-    border-radius: 6px;
-    background-color: #dbeafe;
-    flex-shrink: 0;
+.foto-producto {
+    width: 180px;              /* Obliga a todas a ocupar exactamente 180px de ancho */
+    height: 180px;             /* Obliga a todas a ocupar exactamente 180px de alto */
+    object-fit: contain;       /* Encaja la consola entera sin recortarla ni deformarla */
+    object-position: center;   /* Centra el dibujo dentro de ese cuadro de 180x180 */
+    flex-shrink: 0;            /* Evita que el cuadro se encoja si hay mucho texto */
+    display: block;
 }
 
-.card-info {
+
+.datos-producto {
     flex: 1;
 }
 
-.card-compra {
+.zona-compra {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 0.5rem;
 }
 
-.card-compra .precio {
+.zona-compra .precio {
     margin-bottom: 0;
 }
 
-.card h3 {
-    margin: 0.4rem 0;
-    flex-direction: row;
-    justify-content: space-end;
-    position: relative;
-	/* border: 1px solid red; */
-	margin-bottom: 5px;
-	}
-.card-reserva {
-    background-color: #121c3b;
-    border: 1px solid #1e3a8a;
-    border-radius: 8px;
-    padding: 1.5rem;
-    flex: 1 1 220px; 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-end;
-    position: relative;
-	border: 1px solid red;
-	margin-bottom: 5px;
-	}
-.card h3 {
-    margin-top: 1rem;
-	margin-right: 1rem;
+.tarjeta h3 {
+    margin: 0.4rem 0 5px 0;
     font-size: 1.2rem;
-}
-
-.fotos {
-	width: 5px;
-	border: 5px;
 }
 
 .plataforma {
@@ -261,7 +225,7 @@ nav a:hover {
     margin-bottom: 1rem;
 }
 
-.card button {
+.tarjeta button {
     background-color: #2563eb;
     color: white;
     border: none;
@@ -271,29 +235,17 @@ nav a:hover {
     font-weight: bold;
 }
 
-.card-reserva button {
-    background-color: #2563eb;
-    color: white;
-    border: none;
-    padding: 0.5rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.card button:hover {
+.tarjeta button:hover {
     background-color: #1d4ed8;
 }
 
 /* ETIQUETAS */
-.badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+.etiqueta {
     font-size: 0.75rem;
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
     font-weight: bold;
+    color: #ffffff;
 }
 
 .fisico    { background-color: #2563eb; }
@@ -301,7 +253,7 @@ nav a:hover {
 .consola   { background-color: #d97706; }
 .accesorio { background-color: #7c3aed; }
 
-/* FOOTER */
+/* PIE DE PÁGINA */
 footer {
     text-align: center;
     padding: 1.5rem;
@@ -309,16 +261,4 @@ footer {
     border-top: 3px solid #f07a1f;
     color: #cbd5e1;
     margin-top: 3rem;
-}
-
-/* texto blanco sobre las etiquetas de color */
-.badge,
-.badge-inline {
-    color: #ffffff;
-}
-
-/* sombra suave para separar los recuadros del fondo claro */
-.carrusel,
-.card {
-    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
 }
