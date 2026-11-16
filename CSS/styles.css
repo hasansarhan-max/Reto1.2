@@ -30,7 +30,6 @@ header {
     height: 80px;
     width: auto;
     display: block;
-    /* un halo claro suave para que el azul del logo se lea sobre el fondo oscuro */
     filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.35));
 }
 
@@ -182,6 +181,8 @@ nav a:hover {
     border-radius: 8px;
     padding: 1.2rem 1.5rem;
     margin-bottom: 1.5rem;
+	height: 220px; /* ¡Obligatorio para que object-fit funcione bien! */
+  width: 100%;
 }
 
 .card-larga {
@@ -192,8 +193,8 @@ nav a:hover {
 }
 
 .card-larga .card-img {
-    width: 200px;
-    height: 110px;
+    height: 200px;
+	 width: 200px;
     object-fit: cover;
     border-radius: 6px;
     background-color: #dbeafe;
@@ -220,7 +221,7 @@ nav a:hover {
     flex-direction: row;
     justify-content: space-end;
     position: relative;
-	border: 1px solid red;
+	/* border: 1px solid red; */
 	margin-bottom: 5px;
 	}
 .card-reserva {
