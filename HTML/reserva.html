@@ -1,75 +1,120 @@
+
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>PlayMarket - Gestión de Videojuegos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar GTA VI | PlayMarket</title>
+
     <link rel="stylesheet" href="../CSS/styles.css">
 </head>
+
 <body>
-    <header>
-        <div class="logo">PlayMarket</div>
+
+    <!-- CABECERA -->
+
+	    <header id="inicio">
+        <div class="logo">
+            <img src="../Imagenes/icono.png" alt="Logo PlayMarket">
+            <span>PlayMarket</span>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li class="dropdown">
+                <li class="desplegable">
                     <a href="#productos">Productos ▾</a>
                     <ul class="submenu">
                         <li><a href="#fisicos">Videojuegos Físicos</a></li>
-                        <li><a href="#digitales">Códigos Digitales</a></li>
+                        <li><a href="#digitales">Videojuegos Digitales</a></li>
                         <li><a href="#consolas">Consolas</a></li>
                         <li><a href="#accesorios">Accesorios</a></li>
                     </ul>
                 </li>
-                <li><a href="reserva.html" >Reservas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="reserva.html">Reservas</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-		<section id="inicio" class="hero">
-            <h1>Bienvenido a PlayMarket</h1>
-            <p>Tu base de datos y tienda de confianza para la gestión de videojuegos, consolas y accesorios.</p>
-        </section>
-		
-		 <section id="productos">
-            <h2>Catálogo de Productos</h2>
+
+
+    <!-- PORTADA GTA VI -->
+    <main class="gta-principal">
+
+        <section class="gta-portada">
+
+            <!-- TRAILER DE FONDO -->
             
-            <div class="contenedor-cards">
-                <article class="card-reserva">
-                    <img class="foto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4yYGi7KMRWa7iWFGZiE64PcveZSfF5pGVs1j4i_hkgw&s=10" alt="Grand Theft Auto VI">
-                    <h3>Grand Theft Auto VI</h3>
-                    <p class="plataforma">PlayStation 5</p>
-                    <p class="precio">79.99 €</p>
-                    <button>Reserva</button>
-                </article>
+		<iframe
+			class="gta-trailer"
+			src="https://www.youtube-nocookie.com/embed/N6f30RVHOVw?autoplay=1&mute=1&loop=1&playlist=N6f30RVHOVw&controls=0&playsinline=1"
+			title="Tráiler de GTA VI"
+			allow="autoplay; encrypted-media; picture-in-picture"
+			referrerpolicy="strict-origin-when-cross-origin">
+		</iframe>
+
+
+
+            <!-- CAPA OSCURA -->
+            <div class="gta-capa"></div>
+
+
+            <!-- CONTENIDO DEL JUEGO -->
+            <div class="gta-contenido">
+
+                <span class="gta-etiqueta">
+                    RESERVA DISPONIBLE
+                </span>
+
+                <h1>
+                    GRAND THEFT AUTO VI
+                </h1>
+
+                <p class="gta-descripcion">
+                    Prepárate para descubrir una nueva aventura
+                    en el mundo de Grand Theft Auto.
+                    Explora Vice City, conduce y vive una experiencia única.
+                </p>
+
+
+                <!-- INFORMACIÓN -->
+                <div class="gta-datos">
+
+                    <span>PlayStation 5</span>
+
+                    <span>Acción / Aventura</span>
+
+                </div>
+
+
+                <!-- PRECIO -->
+                <p class="gta-precio">
+                    79,99 €
+                </p>
+
+
+                <!-- BOTÓN DE RESERVA -->
+                <a href="formulario-reserva.html" class="gta-boton">
+                    RESERVAR AHORA
+                </a>
+
             </div>
-			
-			<div class="contenedor-cards">
-                <article class="card-reserva">
-                    <img class="foto" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/capsule_616x353.jpg?t=1790290043" alt="Elden ring">
-                    <h3>Elden ring</h3>
-                    <p class="plataforma">PlayStation 5/ Xbox / Switch 2</p>
-                    <p class="precio">79.99 €</p>
-                    <button>Reserva</button>
-                </article>
-            </div>
-			
-			<div class="contenedor-cards">
-                <article class="card-reserva">
-                    <img class="foto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa2tNj797MwckdlSxbzsjudWYIR9iOO9yj7-X29yWLBQekrBd_UaWo0mw9&s=10" alt="The Legend of Zelda: Ocarina of Time">
-                    <h3>The Legend of Zelda: Ocarina of Time</h3>
-                    <p class="plataforma">Switch 2</p>
-                    <p class="precio">79.99 €</p>
-                    <button>Reserva</button>
-                </article>
-            </div>
+
         </section>
+
     </main>
 
-    <footer>
-        <p></p>
-    </footer>
+
+    <!-- PIE DE PÁGINA -->
+		<footer id="contacto">
+			<div class="footer-links">
+				<a href="../Politicas/politica-privacidad.txt">Política de Privacidad</a>
+				<a href="../Politicas/politica-cookies.txt">Política de Cookies</a>
+				<a href="../Politicas/aviso-legal.txt">Aviso legal</a>
+			</div>
+		</footer>
 
 </body>
+
 </html>

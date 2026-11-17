@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva GTA VI | PlayMarket</title>
+
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+
+<body>
+
+    <!-- CABECERA -->
+        <header id="inicio">
+        <div class="logo">
+            <img src="../Imagenes/icono.png" alt="Logo PlayMarket">
+            <span>PlayMarket</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li class="desplegable">
+                    <a href="#productos">Productos ▾</a>
+                    <ul class="submenu">
+                        <li><a href="#fisicos">Videojuegos Físicos</a></li>
+                        <li><a href="#digitales">Videojuegos Digitales</a></li>
+                        <li><a href="#consolas">Consolas</a></li>
+                        <li><a href="#accesorios">Accesorios</a></li>
+                    </ul>
+                </li>
+                <li><a href="reserva.html">Reservas</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- FORMULARIO -->
+    <main class="pagina-formulario">
+
+        <h1>Reserva tu GTA VI</h1>
+
+        <p class="texto-formulario">
+            Completa tus datos para reservar Grand Theft Auto VI.
+        </p>
+
+
+        <!-- RESUMEN DEL JUEGO -->
+        <section class="resumen-juego">
+
+            <h2>Tu videojuego</h2>
+
+            <div class="juego-resumen">
+
+                <img
+                    src="https://img.youtube.com/vi/N6f30RVHOVw/maxresdefault.jpg"
+                    alt="Grand Theft Auto VI">
+
+                <div class="juego-resumen-info">
+
+                    <h3>Grand Theft Auto VI</h3>
+
+                    <p>Plataforma: PlayStation 5</p>
+
+                    <p>Género: Acción / Aventura</p>
+
+                    <p class="precio-reserva">79,99 €</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DATOS DEL CLIENTE -->
+        <section class="datos-reserva">
+
+            <h2>Datos de la reserva</h2>
+
+            <form action="#" method="post">
+
+                <div class="campo-reserva">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre"
+                        placeholder="Introduce tu nombre" required>
+                </div>
+
+                <div class="campo-reserva">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos" name="apellidos"
+                        placeholder="Introduce tus apellidos" required>
+                </div>
+
+                <div class="campo-reserva">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email"
+                        placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div class="campo-reserva">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono"
+                        placeholder="Tu número de teléfono" required>
+                </div>
+
+                <div class="campo-reserva">
+                    <label for="fecha">Fecha de reserva</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+
+                <div class="campo-reserva">
+                    <label for="cantidad">Cantidad</label>
+                    <select id="cantidad" name="cantidad" required>
+                        <option value="">Selecciona una cantidad</option>
+                        <option value="1">1 unidad</option>
+                        <option value="2">2 unidades</option>
+                        <option value="3">3 unidades</option>
+                    </select>
+                </div>
+
+                <div class="campo-reserva">
+                    <label for="comentarios">Comentarios adicionales</label>
+                    <textarea id="comentarios" name="comentarios"
+                        rows="4" placeholder="Escribe algún comentario..."></textarea>
+                </div>
+
+                <div class="campo-reserva">
+                    <label class="condiciones">
+                        <input type="checkbox" name="condiciones" required>
+                        Acepto las condiciones de la reserva.
+                    </label>
+                </div>
+
+                <input type="hidden" name="videojuego"
+                    value="Grand Theft Auto VI">
+
+                <button type="submit" class="boton-confirmar">
+                    CONFIRMAR RESERVA
+                </button>
+
+            </form>
+
+        </section>
+
+        <a href="reserva.html" class="volver-reservas">
+            ← Volver a GTA VI
+        </a>
+
+    </main>
+
+
+    <!-- PIE DE PAGINA -->
+		<footer id="contacto">
+			<div class="footer-links">
+				<a href="../Politicas/politica-privacidad.txt">Política de Privacidad</a>
+				<a href="../Politicas/politica-cookies.txt">Política de Cookies</a>
+				<a href="../Politicas/aviso-legal.txt">Aviso legal</a>
+			</div>
+		</footer>
+
+	</body>
+</html>

@@ -12,7 +12,9 @@ body {
     overflow-x: hidden;
 }
 
-/* CABECERA */
+/* =========================================
+   CABECERA Y MENÚ DE NAVEGACIÓN
+   ========================================= */
 header {
     background-color: #081c3a;
     border-bottom: 3px solid #f07a1f;
@@ -20,6 +22,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0.6rem 2rem;
+    position: relative;
+    z-index: 20;
 }
 
 .logo {
@@ -28,7 +32,8 @@ header {
     gap: 0.8rem;
     color: #ffffff;
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
 }
 
 .logo img {
@@ -41,6 +46,7 @@ header {
 nav ul {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 1.5rem;
 }
 
@@ -55,7 +61,8 @@ nav a:hover {
     color: #f9a03f;
 }
 
-.desplegable {
+.desplegable,
+.dropdown {
     position: relative;
 }
 
@@ -64,7 +71,7 @@ nav a:hover {
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 10;
+    z-index: 30;
     background-color: #081c3a;
     border: 1px solid #f07a1f;
     list-style: none;
@@ -77,31 +84,38 @@ nav a:hover {
     padding: 0.5rem 1rem;
 }
 
-.desplegable:hover .submenu {
+.desplegable:hover .submenu,
+.dropdown:hover .submenu {
     display: flex;
 }
 
-/* SECCIONES */
+/* =========================================
+   SECCIONES Y TÍTULOS DE INICIO
+   ========================================= */
 #destacados,
 #productos {
     width: 100%;
     padding: 2rem 2rem 0;
 }
 
-#tienda {
+#tienda,
+#accesorios {
     width: 100%;
     padding-top: 1rem;
 }
 
 #destacados h2,
 #productos h2,
-#tienda h2 {
+#tienda h2,
+#accesorios h2 {
     margin-bottom: 1.2rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid #2563eb;
 }
 
-/* CARRUSEL */
+/* =========================================
+   CARRUSEL DE DESTACADOS
+   ========================================= */
 .carrusel {
     position: relative;
     width: 100%;
@@ -141,13 +155,35 @@ nav a:hover {
 }
 
 .fondo-destacado {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    object-position: center 20%;
-    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+  width: 80%;        
+  height: 100%;
+  margin-left: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center 20%;
+  
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%);
 }
+
+.diapositiva-gta {
+  background: linear-gradient(135deg, #1b1026 0%, #3b1936 100%);
+}
+
+.diapositiva-gta .fondo-destacado {
+  width: 80%;
+  height: 100%;
+  margin-left: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center 20%;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%);
+  mask-image: linear-gradient(to right, transparent 0%, black 25%);
+}
+
+.diapositiva-gta .texto-destacado h3 { color: #ffffff; }
+.diapositiva-gta .texto-destacado .plataforma { color: #e2b8d5; }
+.diapositiva-gta .texto-destacado .precio { color: #fbbf24; }
 
 .diapositiva::after {
     content: "";
@@ -183,7 +219,9 @@ nav a:hover {
     font-size: 2rem;
 }
 
-/* TARJETAS */
+/* =========================================
+   TARJETAS DE PRODUCTOS
+   ========================================= */
 .tarjeta {
     background-color: #ffffff;
     border: 2px solid #2563eb;
@@ -258,7 +296,9 @@ nav a:hover {
     background-color: #1d4ed8;
 }
 
-/* ETIQUETAS */
+/* =========================================
+   ETIQUETAS
+   ========================================= */
 .etiqueta {
     font-size: 0.75rem;
     padding: 0.2rem 0.5rem;
@@ -272,7 +312,9 @@ nav a:hover {
 .consola   { background-color: #d97706; }
 .accesorio { background-color: #7c3aed; }
 
-/* PIE DE PÁGINA */
+/* =========================================
+   PIE DE PÁGINA
+   ========================================= */
 footer {
     text-align: center;
     padding: 1.5rem;
@@ -298,6 +340,9 @@ footer {
   text-decoration: underline;
 }
 
+/* =========================================
+   PÁGINA DE CONTACTO Y FORMULARIOS
+   ========================================= */
 .contacto {
     padding: 80px 20px;
     background-color: #0b1329;
@@ -308,8 +353,6 @@ footer {
     max-width: 1100px;
     margin: 0 auto;
 }
-
-/* Título y subtítulo */
 
 .contacto-titulo {
     margin-bottom: 10px;
@@ -324,15 +367,11 @@ footer {
     text-align: center;
 }
 
-/* Distribución de las tarjetas */
-
 .contacto-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
 }
-
-/* Diseño de las tarjetas */
 
 .contacto-card {
     padding: 30px;
@@ -346,19 +385,17 @@ footer {
     color: #f1f5f9;
 }
 
-/* Icono del formulario */
-
 .icono-mensaje {
     width: 88px;
     height: 84px;
 }
 
-/* Descripción de las tarjetas */
-.mensaje-icon-txt{
+.mensaje-icon-txt {
     display: flex;
     align-items: center;
     gap: 20px;
 }
+
 .card-desc {
     display: flex;
     align-items: center;
@@ -367,18 +404,9 @@ footer {
     font-size: 0.95rem;
 }
 
-
-/* =========================================
-   6. FORMULARIO DE CONTACTO
-========================================= */
-
-/* Separación entre los campos */
-
 .form-group {
     margin-bottom: 18px;
 }
-
-/* Etiquetas */
 
 .form-group label {
     display: block;
@@ -386,8 +414,6 @@ footer {
     color: #cbd5e1;
     font-size: 0.9rem;
 }
-
-/* Campos de texto */
 
 .form-group input,
 .form-group textarea {
@@ -401,21 +427,15 @@ footer {
     outline: none;
 }
 
-/* Borde cuando seleccionamos un campo */
-
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: #3b82f6;
 }
 
-/* Área del mensaje */
-
 .form-group textarea {
     min-height: 120px;
     resize: vertical;
 }
-
-/* Botón de envío */
 
 .btn-enviar {
     width: 100%;
@@ -434,12 +454,6 @@ footer {
     background-color: #1d4ed8;
 }
 
-
-/* 
-   7. INFORMACIÓN DE CONTACTO*/
-
-/* Lista de datos */
-
 .info-lista {
     display: flex;
     flex-direction: column;
@@ -447,25 +461,16 @@ footer {
     margin-bottom: 30px;
 }
 
-/* Nombre de cada dato */
-
 .info-item strong {
     display: block;
     margin-bottom: 3px;
     color: #f1f5f9;
 }
 
-/* Contenido de cada dato */
-
 .info-item span {
     color: #94a3b8;
     font-size: 0.95rem;
 }
-
-
-/* =========================================
-   8. REDES SOCIALES
-========================================= */
 
 .redes {
     padding-top: 20px;
@@ -480,6 +485,7 @@ footer {
 
 .redes-icons {
     display: flex;
+    align-items: center;
     gap: 15px;
 }
 
@@ -493,19 +499,28 @@ footer {
     color: #93c5fd;
 }
 
+/* Iconos de Redes Sociales (Tamaño grande solicitado) */
+.icono-youtube {
+    width: 78px;
+    height: 74px;
+    object-fit: contain;
+}
+
+.icono-instagram {
+    width: 78px;
+    height: 74px;
+    object-fit: contain;
+}
 
 /* =========================================
-   9. SECCIÓN DE UBICACIÓN
-========================================= */
-
+   UBICACIÓN Y MAPA
+   ========================================= */
 .ubicacion {
     width: 90%;
     max-width: 1100px;
     margin: 70px auto 40px;
     text-align: center;
 }
-
-/* Título y líneas decorativas */
 
 .titulo-ubicacion {
     display: flex;
@@ -521,8 +536,6 @@ footer {
     font-size: 32px;
 }
 
-/* Líneas laterales */
-
 .linea {
     flex: 1;
     max-width: 200px;
@@ -530,18 +543,11 @@ footer {
     background-color: #2864e8;
 }
 
-/* Texto descriptivo */
-
 .descripcion-ubicacion {
     margin-bottom: 25px;
     color: #a9bddc;
     font-size: 16px;
 }
-
-
-/* =========================================
-   10. MAPA DE GOOGLE MAPS
-========================================= */
 
 .mapa {
     display: flex;
@@ -559,65 +565,423 @@ footer {
     border: 0;
 }
 
-
-footer {
-    margin-top: 3rem;
-    padding: 1.5rem;
-    background-color: #121c3b;
-    border-top: 1px solid #1e3a8a;
-    color: #64748b;
-    text-align: center;
+/* =========================================
+   PORTADA GTA VI & RESERVAS
+   ========================================= */
+.gta-principal {
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
+.gta-portada {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 85px);
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #081c3a;
+}
+
+.gta-trailer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: max(100%, 177.78vh);
+    height: max(100%, 56.25vw);
+    transform: translate(-50%, -50%);
+    border: none;
+    pointer-events: none;
+}
+
+.gta-capa {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        90deg,
+        rgba(8, 28, 58, 0.95) 0%,
+        rgba(8, 28, 58, 0.70) 45%,
+        rgba(8, 28, 58, 0.25) 100%
+    );
+}
+
+.gta-contenido {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    padding: 3rem 6%;
+    color: white;
+}
+
+.gta-etiqueta {
+    display: inline-block;
+    background-color: #f07a1f;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.gta-contenido h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.gta-descripcion {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #e2e8f0;
+    margin-bottom: 25px;
+}
+
+.gta-datos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.gta-datos span {
+    background-color: rgba(255,255,255,0.15);
+    color: white;
+    padding: 11px 17px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.gta-precio {
+    color: #f07a1f;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.gta-boton {
+    display: inline-block;
+    background-color: #f07a1f;
+    color: white;
+    text-decoration: none;
+    padding: 17px 35px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.gta-boton:hover {
+    background-color: #d9630c;
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(240,122,31,0.4);
+}
+
+.pagina-formulario {
+    width: 90%;
+    max-width: 850px;
+    margin: 40px auto;
+}
+
+.pagina-formulario h1 {
+    text-align: center;
+    color: #081c3a;
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+
+.texto-formulario {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.resumen-juego,
+.datos-reserva {
+    background-color: white;
+    border: 2px solid #f07a1f;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(8, 28, 58, 0.10);
+}
+
+.resumen-juego h2,
+.datos-reserva h2 {
+    color: #081c3a;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #f07a1f;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.juego-resumen {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.juego-resumen img {
+    width: 220px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #081c3a;
+}
+
+.juego-resumen-info h3 {
+    color: #081c3a;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.juego-resumen-info p {
+    color: #475569;
+    margin-bottom: 5px;
+}
+
+.juego-resumen-info .precio-reserva {
+    color: #f07a1f;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.campo-reserva {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.campo-reserva label {
+    color: #081c3a;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.campo-reserva input,
+.campo-reserva select,
+.campo-reserva textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #f8fafc;
+    color: #0f172a;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.campo-reserva input:focus,
+.campo-reserva select:focus,
+.campo-reserva textarea:focus {
+    outline: none;
+    border: 2px solid #f07a1f;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(240, 122, 31, 0.25);
+}
+
+.campo-reserva textarea {
+    resize: vertical;
+}
+
+.campo-reserva .condiciones {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-weight: normal;
+}
+
+.campo-reserva .condiciones input {
+    width: auto;
+    accent-color: #f07a1f;
+}
+
+.boton-confirmar {
+    width: 100%;
+    padding: 16px;
+    background-color: #f07a1f;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.boton-confirmar:hover {
+    background-color: #d9630c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(240, 122, 31, 0.3);
+}
+
+.volver-reservas {
+    display: inline-block;
+    color: #081c3a;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.volver-reservas:hover {
+    color: #f07a1f;
+}
 
 /* =========================================
-   12. ADAPTACIÓN A MÓVILES
-========================================= */
-
-@media (max-width: 768px) {
-
-    /* Las tarjetas pasan a una sola columna */
-
-    .contacto-grid {
-        grid-template-columns: 1fr;
+   MEDIA QUERIES (RESPONSIVE)
+   ========================================= */
+@media (max-width: 1024px) {
+    header {
+        padding: 0.6rem 1.2rem;
     }
-
-    /* Reducimos el tamaño del título */
-
-    .contacto-titulo {
+    #destacados,
+    #productos {
+        padding: 1.5rem 1.2rem 0;
+    }
+    .carrusel {
+        height: 360px;
+    }
+    .texto-destacado {
+        left: 2rem;
+        max-width: 340px;
+    }
+    .texto-destacado h3 {
         font-size: 2rem;
     }
+    .texto-destacado .precio {
+        font-size: 1.6rem;
+    }
+    .foto-producto {
+        width: 140px;
+        height: 140px;
+    }
+}
 
-    /* Colocamos el menú debajo del logo */
-
+@media (max-width: 768px) {
     header {
         flex-direction: column;
         gap: 1rem;
+        padding: 1rem;
     }
+    .logo img {
+        height: 65px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .carrusel {
+        height: 400px;
+    }
+    .diapositiva {
+        display: flex;
+        flex-direction: column;
+    }
+    .fondo-destacado {
+        width: 100%;
+        height: 55%;
+        margin-left: 0;
+        -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+        mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    }
+    .texto-destacado {
+        position: static;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+        height: 45%;
+        padding: 0.8rem 1.2rem;
+        justify-content: center;
+    }
+    .texto-destacado h3 {
+        font-size: 1.5rem;
+        margin: 0.2rem 0;
+    }
+    .texto-destacado .precio {
+        font-size: 1.3rem;
+    }
+    .tarjeta {
+        height: auto;
+        padding: 1.2rem;
+    }
+    .producto-fila {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    .foto-producto {
+        width: 160px;
+        height: 160px;
+    }
+    .zona-compra {
+        width: 100%;
+        align-items: center;
+        border-top: 1px solid #e2e8f0;
+        padding-top: 0.8rem;
+    }
+    .zona-compra form,
+    .tarjeta button {
+        width: 100%;
+    }
+    .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+    .contacto-titulo {
+        font-size: 2rem;
+    }
+    .gta-portada {
+        min-height: 650px;
+        height: auto;
+    }
+    .gta-contenido {
+        padding: 30px 20px;
+    }
+    .gta-contenido h1 {
+        font-size: 2.3rem;
+    }
+    .gta-capa {
+        background: rgba(8, 28, 58, 0.85);
+    }
+}
 
-}
-/* Icono de Youtube */
-.icono-youtube{
-    width: 78px;
-     height: 74px;
-}
-/* Icono de Instagram */
-.icono-instagram{
-    width: 78px;
-    height: 74px;
-}
-.footer{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #121c3b;
-    border-top: 2px solid #2563eb;
-    height: 100px;
-}
-.footer-txt{
-    color: #ffffff;
-    font-size: 1rem;
-    display: flex;
-    justify-content: center;
+@media (max-width: 480px) {
+    #destacados,
+    #productos {
+        padding: 1.2rem 0.8rem 0;
+    }
+    .carrusel {
+        height: 360px;
+    }
+    .texto-destacado h3 {
+        font-size: 1.3rem;
+    }
+    .submenu {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .juego-resumen {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .juego-resumen img {
+        width: 100%;
+        height: 180px;
+    }
 }
