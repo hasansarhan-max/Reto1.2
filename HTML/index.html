@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- CONFIGURACIÓN Y METADATOS DEL DOCUMENTO -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PlayMarket</title>
+    <link rel="icon" type="image/png" href="../Imagenes/icono.png">
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+
+<body>
+    <!-- CABECERA Y NAVEGACIÓN PRINCIPAL (Menú y desplegable) -->
+    <header id="inicio">
+        <div class="logo">
+            <img src="../Imagenes/icono.png" alt="Logo PlayMarket">
+            <span>PlayMarket</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li class="desplegable">
+                    <a href="#productos">Productos ▾</a>
+                    <ul class="submenu">
+                        <li><a href="#fisicos">Videojuegos Físicos</a></li>
+                        <li><a href="#digitales">Videojuegos Digitales</a></li>
+                        <li><a href="#consolas">Consolas</a></li>
+                        <li><a href="#accesorios">Accesorios</a></li>
+                    </ul>
+                </li>
+                <li><a href="reserva.html">Reservas</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECCIÓN DESTACADOS: Carrusel panorámico + Audio ambiental -->
+        <section id="destacados">
+            <h2>Destacados</h2> <!--Warning de pasar directamente a h2-->
+
+            <div class="carrusel">
+                <div class="pista-carrusel">
+                    <!-- DIAPOSITIVA 1 -->
+                    <article class="diapositiva diapositiva-gta">
+						<map name="gta">
+							<area shape="rect" coords="0,0,1920,1080" href="../HTML/formulario-reserva.html" alt="../HTML/formulario-reserva.html" />
+                        <img class="fondo-destacado" src="../Imagenes/gta6.jpg" alt="Grand Theft Auto VI" usemap="#gta">
+                        <div class="texto-destacado">
+                            <h3>Grand Theft Auto VI</h3>
+                            <p class="plataforma">PlayStation 5</p>
+                            <p class="precio">79.99 €</p>
+                        </div>
+                    </article>
+
+                    <!-- DIAPOSITIVA 2 -->
+                    <article class="diapositiva">
+                        <img class="fondo-destacado" src="../Imagenes/hollow.avif" alt="Hollow Knight">
+                        <div class="texto-destacado">
+                            <h3>Hollow Knight</h3>
+                            <p class="plataforma">Xbox Series X / PlayStation 5</p>
+                            <p class="precio">29.99 €</p>
+                        </div>
+                    </article>
+
+                    <!-- DIAPOSITIVA 3 -->
+                    <article class="diapositiva">
+                        <img class="fondo-destacado" src="../Imagenes/nintendo.jpg" alt="Nintendo Switch OLED">
+                        <div class="texto-destacado">
+                            <h3>Nintendo Switch OLED</h3>
+                            <p class="plataforma">Nintendo</p>
+                            <p class="precio">349.99 €</p>
+                        </div>
+                    </article>
+
+                    <!-- DIAPOSITIVA 4 -->
+                    <article class="diapositiva">
+                        <img class="fondo-destacado" src="../Imagenes/dualsense.jpeg" alt="Mando DualSense">
+                        <div class="texto-destacado">
+                            <h3>Mando DualSense</h3>
+                            <p class="plataforma">PlayStation 5</p>
+                            <p class="precio">74.99 €</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Música de fondo en bucle (se activa al primer clic del usuario) -->
+            <audio id="musica-fondo" autoplay loop>
+                <source src="../Audio/gta6.mp3" type="audio/mpeg">
+            </audio>
+            <script>
+                const audio = document.getElementById('musica-fondo');
+                audio.volume = 0.1; 
+
+                document.addEventListener('click', () => {
+                    if (audio.paused) audio.play();
+                }, { once: true });
+            </script>
+        </section>
+
+        <!-- CATÁLOGO DE PRODUCTOS (Dividido por categorías) -->
+        <section id="productos">
+            <h2>Catálogo de Productos</h2>
+
+            <div class="lista-productos">
+                <!-- CATEGORÍA 1: CONSOLAS -->
+                <section class="tienda">
+                    <h2>Consolas</h2>
+
+                    <article class="tarjeta producto-fila" id="consolas">
+                        <img class="foto-producto" src="../Imagenes/ps5.png" alt="PlayStation 5">
+                        <div class="datos-producto">
+                            <span class="etiqueta consola">Consola</span>
+                            <h3>PlayStation 5</h3>
+                            <p class="plataforma">Sony</p>
+                        </div>
+                        <div class="zona-compra">
+                            <p class="precio">499.99 €</p>
+                            <form action="https://www.game.es/playstation-5/183505" method="get" target="_blank">
+                                <button>Añadir al carro</button>
+                            </form>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta producto-fila">
+                        <img class="foto-producto" src="../Imagenes/ps5pro.jpg" alt="PlayStation 5 Pro">
+                        <div class="datos-producto">
+                            <span class="etiqueta consola">Consola</span>
+                            <h3>PlayStation 5 Pro</h3>
+                            <p class="plataforma">Sony</p>
+                        </div>
+                        <div class="zona-compra">
+                            <p class="precio">990.50 €</p>
+                            <form action="https://www.game.es/playstation-5-modelo-pro/236300" method="get" target="_blank">
+                                <button>Añadir al carro</button>
+                            </form>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta producto-fila">
+                        <img class="foto-producto" src="../Imagenes/xboxseriesx.webp" alt="Xbox Series X">
+                        <div class="datos-producto">
+                            <span class="etiqueta consola">Consola</span>
+                            <h3>Xbox Series X</h3>
+                            <p class="plataforma">Microsoft</p>
+                        </div>
+                        <div class="zona-compra">
+                            <p class="precio">599.99 €</p>
+                            <form action="https://www.game.es/xbox-series-x/182899" method="get" target="_blank">
+                                <button>Añadir al carro</button>
+                            </form>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta producto-fila">
+                        <img class="foto-producto" src="../Imagenes/nintendoled.avif" alt="Nintendo Switch OLED">
+                        <div class="datos-producto">
+                            <span class="etiqueta consola">Consola</span>
+                            <h3>Nintendo Switch OLED</h3>
+                            <p class="plataforma">Nintendo</p>
+                        </div>
+                        <div class="zona-compra">
+                            <p class="precio">349.90 €</p>
+                            <form action="https://www.game.es/nintendo-switch-oled-neon/191678" method="get" target="_blank">
+                                <button>Añadir al carro</button>
+                            </form>
+                        </div>
+                    </article>
+
+                    <!-- CATEGORÍA 2: VIDEOJUEGOS FÍSICOS -->
+                    <section class="tienda">
+                        <h2>Juegos Fisicos</h2>
+                
+                        <article class="tarjeta producto-fila" id="fisicos">
+                            <img class="foto-producto" src="../Imagenes/gta6disco.webp" alt="Grand Theft Auto VI">
+                            <div class="datos-producto">
+                                <span class="etiqueta fisico">Físico</span>
+                                <h3>Grand Theft Auto VI</h3>
+                                <p class="plataforma">PlayStation 5</p>
+                            </div>
+                            <div class="zona-compra">
+                                <p class="precio">79.99 €</p>
+                                <form action="https://www.game.es/playstation-5-modelo-pro/236300" method="get" target="_blank">
+                                    <button>Añadir al carro</button>
+                                </form>
+                            </div>
+                        </article>
+                        
+                        <article class="tarjeta producto-fila fisicos">
+                            <img class="foto-producto" src="../Imagenes/zelda.webp" alt="The Legend of Zelda: Tears of the Kingdom">
+                            <div class="datos-producto">
+                                <span class="etiqueta fisico">Físico</span>
+                                <h3>The Legend of Zelda: Tears of the Kingdom</h3>
+                                <p class="plataforma">Nintendo Switch</p>
+                            </div>
+                            <div class="zona-compra">
+                                <p class="precio">69.99 €</p>
+                                <form action="https://www.game.es/the-legend-of-zelda-tears-of-the-kingdom-nintendo-switch/208815" method="get" target="_blank">
+                                    <button>Añadir al carro</button>
+                                </form>
+                            </div>
+                        </article>
+                        
+                        <article class="tarjeta producto-fila fisicos">
+                            <img class="foto-producto" src="../Imagenes/spider.jpg" alt="Marvel's Spider-Man 2">
+                            <div class="datos-producto">
+                                <span class="etiqueta fisico">Físico</span>
+                                <h3>Marvel's Spider-Man 2</h3>
+                                <p class="plataforma">PlayStation 5</p>
+                            </div>
+                            <div class="zona-compra">
+                                <p class="precio">79.99 €</p>
+                                <form action="https://www.game.es/marvels-spider-man-2-ps5/218764" method="get" target="_blank">
+                                    <button>Añadir al carro</button>
+                                </form>
+                            </div>
+                        </article>
+                        
+                        <article class="tarjeta producto-fila fisicos">
+                            <img class="foto-producto" src="../Imagenes/elden.jpg" alt="Elden Ring">
+                            <div class="datos-producto">
+                                <span class="etiqueta fisico">Físico</span>
+                                <h3>Elden Ring</h3>
+                                <p class="plataforma">PlayStation 5 / Xbox Series X</p>
+                            </div>
+                            <div class="zona-compra">
+                                <p class="precio">19.99 €</p>
+                                <form action="https://www.game.es/elden-ring-edicion-standard-ps5/198770" method="get" target="_blank">
+                                    <button>Añadir al carro</button>
+                                </form>
+                            </div>
+                        </article>
+                        
+                        <article class="tarjeta producto-fila fisicos">
+                            <img class="foto-producto" src="../Imagenes/supermario.jpg" alt="Super Mario Bros. Wonder">
+                            <div class="datos-producto">
+                                <span class="etiqueta fisico">Físico</span>
+                                <h3>Super Mario Bros. Wonder</h3>
+                                <p class="plataforma">Nintendo Switch</p>
+                            </div>
+                            <div class="zona-compra">
+                                <p class="precio">59.99 €</p>
+                                <form action="https://www.game.es/super-mario-bros-wonder-nintendo-switch-2-edition-nintendo-switch-2/256319" method="get" target="_blank">
+                                    <button>Añadir al carro</button>
+                                </form>
+                            </div>
+                        </article>
+                        
+                        <article class="tarjeta producto-fila fisicos">
+                            <img class="foto-producto" src="../Imagenes/goodofwar.jpg" alt="Grand God of War Ragnarök">
+                            <div class="datos-producto">
+                                <span class="etiqueta fisico">Físico</span>
+                                <h3>Grand God of War Ragnarök</h3>
+                                <p class="plataforma">PlayStation 5</p>
+                            </div>
+                            <div class="zona-compra">
+                                <p class="precio">39.99 €</p>
+                                <form action="https://www.game.es/god-of-war-ragnarok-ps5/206644" method="get" target="_blank">
+                                    <button>Añadir al carro</button>
+                                </form>
+                            </div>
+                        </article>
+                        
+                        <article class="tarjeta producto-fila fisicos">
+                            <img class="foto-producto" src="../Imagenes/rdr2.png" alt="Red Dead Redemption 2">
+                            <div class="datos-producto">
+                                <span class="etiqueta fisico">Físico</span>
+                                <h3>Red Dead Redemption 2</h3>
+                                <p class="plataforma">PlayStation 4 / Xbox One</p>
+                            </div>
+                            <div class="zona-compra">
+                                <p class="precio">29.99 €</p>
+                                <form action="https://www.game.es/red-dead-redemption-ii/151510" method="get" target="_blank">
+                                    <button>Añadir al carro</button>
+                                </form>
+                            </div>
+                        </article>
+                        
+                        <article class="tarjeta producto-fila fisicos">
+                            <img class="foto-producto" src="../Imagenes/cyberpunk.webp" alt="Cyberpunk 2077 Ultimate Edition">
+                            <div class="datos-producto">
+                                <span class="etiqueta fisico">Físico</span>
+                                <h3>Cyberpunk 2077: Ultimate Edition</h3>
+                                <p class="plataforma">PlayStation 5 / Xbox Series X</p>
+                            </div>
+                            <div class="zona-compra">
+                                <p class="precio">59.99 €</p>
+                                <form action="https://www.game.es/cyberpunk-2077-ultimate-edition-ps5/222711" method="get" target="_blank">
+                                    <button>Añadir al carro</button>
+                                </form>
+                            </div>
+                        </article>
+
+                        <!-- CATEGORÍA 3: CLAVES DIGITALES -->
+                        <section class="tienda">
+                            <h2>Claves Digitales</h2>
+                                
+                            <article class="tarjeta producto-fila" id="digitales">
+                                <img class="foto-producto" src="../Imagenes/hollow.jpg" alt="Hollow Knight">
+                                <div class="datos-producto">
+                                    <span class="etiqueta digital">Digital</span>
+                                    <h3>Hollow Knight</h3>
+                                    <p class="plataforma"> PC / Switch / PS4 / Xbox</p>
+                                </div>
+                                <div class="zona-compra">
+                                    <p class="precio">14.99 €</p>
+                                    <form action="https://www.game.es/hollow-knight/262170" method="get" target="_blank">
+                                        <button>Añadir al carro</button>
+                                    </form>
+                                </div>
+                            </article>
+                            
+                            <article class="tarjeta producto-fila digitales">
+                                <img class="foto-producto" src="../Imagenes/stardew.jpg" alt="Stardew Valley">
+                                <div class="datos-producto">
+                                    <span class="etiqueta digital">Digital</span>
+                                    <h3>Stardew Valley</h3>
+                                    <p class="plataforma">PC / Switch / PS4 / Xbox</p>
+                                </div>
+                                <div class="zona-compra">
+                                    <p class="precio">13.99 €</p>
+                                    <form action="https://store.playstation.com/es-es/product/EP2319-CUSA26625_00-2010147637670638" method="get" target="_blank">
+                                        <button>Añadir al carro</button>
+                                    </form>
+                                </div>
+                            </article>
+                            
+                            <article class="tarjeta producto-fila digitales">
+                                <img class="foto-producto" src="../Imagenes/vampire.webp" alt="Vampire Survivors">
+                                <div class="datos-producto">
+                                    <span class="etiqueta digital">Digital</span>
+                                    <h3>Vampire Survivors</h3>
+                                    <p class="plataforma">PC / Switch / PS5 / Xbox</p>
+                                </div>
+                                <div class="zona-compra">
+                                    <p class="precio">4.99 €</p>
+                                    <form action="https://store.playstation.com/es-es/product/EB0324-PPSA21703_00-0027916840515656" method="get" target="_blank">
+                                        <button>Añadir al carro</button>
+                                    </form>
+                                </div>
+                            </article>
+                            
+                            <article class="tarjeta producto-fila digitales">
+                                <img class="foto-producto" src="../Imagenes/sea.webp" alt="Sea of Thieves">
+                                <div class="datos-producto">
+                                    <span class="etiqueta digital">Digital</span>
+                                    <h3>Sea of Thieves</h3>
+                                    <p class="plataforma">PC / PS5 / Xbox Series X|S</p>
+                                </div>
+                                <div class="zona-compra">
+                                    <p class="precio">39.99 €</p>
+                                    <form action="https://store.playstation.com/es-es/product/EP6311-PPSA17668_00-MINERVA000000000" method="get" target="_blank">
+                                        <button>Añadir al carro</button>
+                                    </form>
+                                </div>
+                            </article>
+                            
+                            <article class="tarjeta producto-fila digitales">
+                                <img class="foto-producto" src="../Imagenes/amongus.jpg" alt="Among Us">
+                                <div class="datos-producto">
+                                    <span class="etiqueta digital">Digital</span>
+                                    <h3>Among Us</h3>
+                                    <p class="plataforma">PC / Switch / PS5 / Xbox</p>
+                                </div>
+                                <div class="zona-compra">
+                                    <p class="precio">4.49 €</p>
+                                    <form action="https://store.playstation.com/es-es/product/EP7028-PPSA03596_00-AMONGUS5SIEE0001" method="get" target="_blank">
+                                        <button>Añadir al carro</button>
+                                    </form>
+                                </div>
+                            </article>
+                            
+                            <article class="tarjeta producto-fila digitales">
+                                <img class="foto-producto" src="../Imagenes/hifi.jpg" alt="Hi-Fi RUSH">
+                                <div class="datos-producto">
+                                    <span class="etiqueta digital">Digital</span>
+                                    <h3>Hi-Fi RUSH</h3>
+                                    <p class="plataforma">PC / PS5 / Xbox Series X|S</p>
+                                </div>
+                                <div class="zona-compra">
+                                    <p class="precio">29.99 €</p>
+                                    <form action="https://store.playstation.com/es-es/product/EP1003-PPSA17169_00-HIFIRUSH00000000" method="get" target="_blank">
+                                        <button>Añadir al carro</button>
+                                    </form>
+                                </div>
+                            </article>
+                            
+                            <article class="tarjeta producto-fila digitales">
+                                <img class="foto-producto" src="../Imagenes/rocket.jpg" alt="Rocket League (Lote de 1100 Créditos)">
+                                <div class="datos-producto">
+                                    <span class="etiqueta digital">Digital</span>
+                                    <h3>Rocket League (Lote de 1100 Créditos)</h3>
+                                    <p class="plataforma">PC / Switch / PS5 / Xbox</p>
+                                </div>
+                                <div class="zona-compra">
+                                    <p class="precio">9.99 €</p>
+                                    <form action="https://store.epicgames.com/p/rocket-league--1100-credits?lang=es-ES" method="get" target="_blank">
+                                        <button>Añadir al carro</button>
+                                    </form>
+                                </div>
+                            </article>
+                            
+                            <article class="tarjeta producto-fila digitales">
+                                <img class="foto-producto" src="../Imagenes/rust.avif" alt="Rust">
+                                <div class="datos-producto">
+                                    <span class="etiqueta digital">Digital</span>
+                                    <h3>Rust</h3>
+                                    <p class="plataforma">PC / PS4 / Xbox One</p>
+                                </div>
+                                <div class="zona-compra">
+                                    <p class="precio">39.99 €</p>
+                                    <form action="https://store.playstation.com/es-es/concept/233072" method="get" target="_blank">
+                                        <button>Añadir al carro</button>
+                                    </form>
+                                </div>
+                            </article>
+
+                            <!-- CATEGORÍA 4: ACCESORIOS -->
+                            <section id="accesorios">
+                                <h2>Accesorios</h2>
+                        
+                                <article class="tarjeta producto-fila">
+                                    <img class="foto-producto" src="../Imagenes/dualsense.jpg" alt="Mando DualSense">
+                                    <div class="datos-producto">
+                                        <span class="etiqueta accesorio">Accesorio</span>
+                                        <h3>Mando DualSense Edge</h3>
+                                        <p class="plataforma">PlayStation 5</p>
+                                    </div>
+                                    <div class="zona-compra">
+                                        <p class="precio">75.99 €</p>
+                                        <form action="https://www.elcorteingles.es/videojuegos/A45592645-mando-dualsense-wireless-control-edge-playstation-5/?utm_medium=cpc&utm_source=google&utm_campaign=eci_cyo_videoj_gads_sem_videojuegos_20260901-20270228_pla_perf_64095&utm_content=na&utm_term=na&gclsrc=aw.ds&gad_source=1&gad_campaignid=19971247604&gbraid=0AAAAADpWSBy2mNxTVRXb6Tb7FNE5l6PMC&gclid=Cj0KCQiA8OrXBhDEARIsAECtlx53Q2ys9Ze0sCbKiHFCvtvfhHSUqHkKKpDoBsqPiydawaAyimk-C0UaAuLqEALw_wcB" method="get" target="_blank">
+                                            <button>Añadir al carro</button>
+                                        </form>
+                                    </div>
+                                </article>
+                                
+                                <article class="tarjeta producto-fila">
+                                    <img class="foto-producto" src="../Imagenes/pulse-elite.jpg" alt="Auriculares Pulse Elite">
+                                    <div class="datos-producto">
+                                        <span class="etiqueta accesorio">Accesorio</span>
+                                        <h3>Auriculares Pulse Elite</h3>
+                                        <p class="plataforma">PlayStation 5 / PC</p>
+                                    </div>
+                                    <div class="zona-compra">
+                                        <p class="precio">149.99 €</p>
+                                        <form action="https://www.playstation.com/es-es/accessories/pulse-elite-wireless-headset/" method="get" target="_blank">
+                                            <button>Añadir al carro</button>
+                                        </form>
+                                    </div>
+                                </article>
+                                
+                                <article class="tarjeta producto-fila">
+                                    <img class="foto-producto" src="../Imagenes/mandopro.jpg" alt="Mando Pro Nintendo Switch">
+                                    <div class="datos-producto">
+                                        <span class="etiqueta accesorio">Accesorio</span>
+                                        <h3>Mando Pro Nintendo Switch</h3>
+                                        <p class="plataforma">Nintendo Switch</p>
+                                    </div>
+                                    <div class="zona-compra">
+                                        <p class="precio">69.99 €</p>
+                                        <form action="https://www.fnac.es/Mando-Nintendo-Switch-Pro-Controller-Cable-USB-Accesorio-Videoconsola-Mando-consola/a1329601?sv_campaign_id=624709&sv_tax1=affiliate&sv_tax2=793282&sv_tax3=Twenga+CSS%20&sv_tax4=10f6a6845500f47fcf45106fc67e1bda&sv_affiliate_id=624709&awc=77630_1794933880_6ab16128d7d09bb47a4e871febc0acb6&origin=AFF_AWIN_624709" method="get" target="_blank">
+                                            <button>Añadir al carro</button>
+                                        </form>
+                                    </div>
+                                </article>
+                                
+                                <article class="tarjeta producto-fila">
+                                    <img class="foto-producto" src="../Imagenes/carga.jpg" alt="Estación de recarga DualSense">
+                                    <div class="datos-producto">
+                                        <span class="etiqueta accesorio">Accesorio</span>
+                                        <h3>Estación de recarga DualSense</h3>
+                                        <p class="plataforma">PlayStation 5</p>
+                                    </div>
+                                    <div class="zona-compra">
+                                        <p class="precio">29.99 €</p>
+                                        <form action="https://www.playstation.com/es-es/accessories/dualsense-charging-station/" method="get" target="_blank">
+                                            <button>Añadir al carro</button>
+                                        </form>
+                                    </div>
+                                </article>
+
+                                <article class="tarjeta producto-fila">
+                                    <img class="foto-producto" src="../Imagenes/microsd-switch.jpg" alt="Tarjeta microSD 256 GB">
+                                    <div class="datos-producto">
+                                        <span class="etiqueta accesorio">Accesorio</span>
+                                        <h3>Tarjeta microSDXC 256 GB</h3>
+                                        <p class="plataforma">Nintendo Switch / Steam Deck</p>
+                                    </div>
+                                    <div class="zona-compra">
+                                        <p class="precio">34.99 €</p>
+                                        <form action="https://www.amazon.es/SanDisk-Tarjeta-microSDXC-Nintendo-Switch/dp/B07KXQX3S3?th=1" method="get" target="_blank">
+                                            <button>Añadir al carro</button>
+                                        </form>
+                                    </div>
+                                </article>
+                            </section> <!-- Fin Accesorios -->
+                        </section> <!-- Fin Claves Digitales -->
+                    </section> <!-- Fin Juegos Físicos -->
+                </section> <!-- Fin Consolas -->
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA (Enlaces legales y políticas) -->
+    <footer id="contacto">
+        <div class="footer-links">
+            <a href="../Politicas/politica-privacidad.txt">Política de Privacidad</a>
+            <a href="../Politicas/politica-cookies.txt">Política de Cookies</a>
+            <a href="../Politicas/aviso-legal.txt">Aviso legal</a>
+        </div>
+    </footer>
+</body>
+</html>
