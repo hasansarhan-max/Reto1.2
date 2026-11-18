@@ -12,9 +12,7 @@ body {
     overflow-x: hidden;
 }
 
-/* =========================================
-   CABECERA Y MENÚ DE NAVEGACIÓN
-   ========================================= */
+/* CABECERA Y MENÚ DE NAVEGACIÓN */
 header {
     background-color: #081c3a;
     border-bottom: 3px solid #f07a1f;
@@ -89,9 +87,7 @@ nav a:hover {
     display: flex;
 }
 
-/* =========================================
-   SECCIONES Y TÍTULOS DE INICIO
-   ========================================= */
+/* SECCIONES Y TÍTULOS DE INICIO */
 #destacados,
 #productos {
     width: 100%;
@@ -113,9 +109,7 @@ nav a:hover {
     border-bottom: 2px solid #2563eb;
 }
 
-/* =========================================
-   CARRUSEL DE DESTACADOS
-   ========================================= */
+/* CARRUSEL DE DESTACADOS */
 .carrusel {
     position: relative;
     width: 100%;
@@ -219,9 +213,7 @@ nav a:hover {
     font-size: 2rem;
 }
 
-/* =========================================
-   TARJETAS DE PRODUCTOS
-   ========================================= */
+/* TARJETAS DE PRODUCTOS */
 .tarjeta {
     background-color: #ffffff;
     border: 2px solid #2563eb;
@@ -296,9 +288,7 @@ nav a:hover {
     background-color: #1d4ed8;
 }
 
-/* =========================================
-   ETIQUETAS
-   ========================================= */
+/*  ETIQUETAS */
 .etiqueta {
     font-size: 0.75rem;
     padding: 0.2rem 0.5rem;
@@ -312,9 +302,7 @@ nav a:hover {
 .consola   { background-color: #d97706; }
 .accesorio { background-color: #7c3aed; }
 
-/* =========================================
-   PIE DE PÁGINA
-   ========================================= */
+/* PIE DE PÁGINA */
 footer {
     text-align: center;
     padding: 1.5rem;
@@ -340,9 +328,7 @@ footer {
   text-decoration: underline;
 }
 
-/* =========================================
-   PÁGINA DE CONTACTO Y FORMULARIOS
-   ========================================= */
+/* PÁGINA DE CONTACTO Y FORMULARIOS */
 .contacto {
     padding: 80px 20px;
 	background-color: #f1f5f9;
@@ -513,9 +499,7 @@ background-color: #1d4ed8;
     object-fit: contain;
 }
 
-/* =========================================
-   UBICACIÓN Y MAPA
-   ========================================= */
+/* UBICACIÓN Y MAPA */
 .ubicacion {
     width: 90%;
     max-width: 1100px;
@@ -547,7 +531,7 @@ background-color: #1d4ed8;
 
 .descripcion-ubicacion {
     margin-bottom: 25px;
-    color: #a9bddc;
+    color: #7d9bc9;
     font-size: 16px;
 }
 
@@ -567,9 +551,7 @@ background-color: #1d4ed8;
     border: 0;
 }
 
-/* =========================================
-   PORTADA GTA VI & RESERVAS
-   ========================================= */
+/* PORTADA GTA VI & RESERVAS */
 .gta-principal {
     width: 100%;
     margin: 0;
@@ -841,9 +823,7 @@ background-color: #1d4ed8;
     color: #f07a1f;
 }
 
-/* =========================================
-   MEDIA QUERIES (RESPONSIVE)
-   ========================================= */
+/* MEDIA QUERIES (RESPONSIVE) */
 @media (max-width: 1024px) {
     header {
         padding: 0.6rem 1.2rem;

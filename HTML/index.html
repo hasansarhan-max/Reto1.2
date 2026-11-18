@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
-<!-- =========================================================
-     CONFIGURACIÓN Y METADATOS DEL DOCUMENTO
-     ========================================================= -->
+<!-- CONFIGURACIÓN Y METADATOS DEL DOCUMENTO -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,9 +11,7 @@
 </head>
 
 <body>
-    <!-- =========================================================
-         CABECERA Y NAVEGACIÓN PRINCIPAL (Menú y desplegable)
-         ========================================================= -->
+    <!-- CABECERA Y NAVEGACIÓN PRINCIPAL (Menú y desplegable) -->
     <header id="inicio">
         <div class="logo">
             <img src="../Imagenes/icono.png" alt="Logo PlayMarket">
@@ -40,11 +36,9 @@
     </header>
 
     <main>
-        <!-- =========================================================
-             SECCIÓN DESTACADOS: Carrusel panorámico + Audio ambiental
-             ========================================================= -->
+        <!-- SECCIÓN DESTACADOS: Carrusel panorámico + Audio ambiental -->
         <section id="destacados">
-            <h2>Destacados</h2>
+            <h2>Destacados</h2> <!--Warning de pasar directamente a h2-->
 
             <div class="carrusel">
                 <div class="pista-carrusel">
@@ -104,15 +98,13 @@
             </script>
         </section>
 
-        <!-- =========================================================
-             CATÁLOGO DE PRODUCTOS (Dividido por categorías)
-             ========================================================= -->
+        <!-- CATÁLOGO DE PRODUCTOS (Dividido por categorías) -->
         <section id="productos">
             <h2>Catálogo de Productos</h2>
 
             <div class="lista-productos">
                 <!-- CATEGORÍA 1: CONSOLAS -->
-                <section id="tienda">
+                <section class="tienda">
                     <h2>Consolas</h2>
 
                     <article class="tarjeta producto-fila" id="consolas">
@@ -176,10 +168,10 @@
                     </article>
 
                     <!-- CATEGORÍA 2: VIDEOJUEGOS FÍSICOS -->
-                    <section id="tienda">
+                    <section class="tienda">
                         <h2>Juegos Fisicos</h2>
                 
-                        <article class="tarjeta producto-fila" id="fisicos">
+                        <article class="tarjeta producto-fila fisicos">
                             <img class="foto-producto" src="../Imagenes/gta6disco.webp" alt="Grand Theft Auto VI">
                             <div class="datos-producto">
                                 <span class="etiqueta fisico">Físico</span>
@@ -194,7 +186,7 @@
                             </div>
                         </article>
                         
-                        <article class="tarjeta producto-fila" id="fisicos">
+                        <article class="tarjeta producto-fila fisicos">
                             <img class="foto-producto" src="../Imagenes/zelda.webp" alt="The Legend of Zelda: Tears of the Kingdom">
                             <div class="datos-producto">
                                 <span class="etiqueta fisico">Físico</span>
@@ -209,7 +201,7 @@
                             </div>
                         </article>
                         
-                        <article class="tarjeta producto-fila" id="fisicos">
+                        <article class="tarjeta producto-fila fisicos">
                             <img class="foto-producto" src="../Imagenes/spider.jpg" alt="Marvel's Spider-Man 2">
                             <div class="datos-producto">
                                 <span class="etiqueta fisico">Físico</span>
@@ -224,7 +216,7 @@
                             </div>
                         </article>
                         
-                        <article class="tarjeta producto-fila" id="fisicos">
+                        <article class="tarjeta producto-fila fisicos">
                             <img class="foto-producto" src="../Imagenes/elden.jpg" alt="Elden Ring">
                             <div class="datos-producto">
                                 <span class="etiqueta fisico">Físico</span>
@@ -239,7 +231,7 @@
                             </div>
                         </article>
                         
-                        <article class="tarjeta producto-fila" id="fisicos">
+                        <article class="tarjeta producto-fila fisicos">
                             <img class="foto-producto" src="../Imagenes/supermario.jpg" alt="Super Mario Bros. Wonder">
                             <div class="datos-producto">
                                 <span class="etiqueta fisico">Físico</span>
@@ -254,7 +246,7 @@
                             </div>
                         </article>
                         
-                        <article class="tarjeta producto-fila" id="fisicos">
+                        <article class="tarjeta producto-fila fisicos">
                             <img class="foto-producto" src="../Imagenes/goodofwar.jpg" alt="Grand God of War Ragnarök">
                             <div class="datos-producto">
                                 <span class="etiqueta fisico">Físico</span>
@@ -269,7 +261,7 @@
                             </div>
                         </article>
                         
-                        <article class="tarjeta producto-fila" id="fisicos">
+                        <article class="tarjeta producto-fila fisicos">
                             <img class="foto-producto" src="../Imagenes/rdr2.png" alt="Red Dead Redemption 2">
                             <div class="datos-producto">
                                 <span class="etiqueta fisico">Físico</span>
@@ -284,7 +276,7 @@
                             </div>
                         </article>
                         
-                        <article class="tarjeta producto-fila" id="fisicos">
+                        <article class="tarjeta producto-fila fisicos">
                             <img class="foto-producto" src="../Imagenes/cyberpunk.webp" alt="Cyberpunk 2077 Ultimate Edition">
                             <div class="datos-producto">
                                 <span class="etiqueta fisico">Físico</span>
@@ -300,10 +292,10 @@
                         </article>
 
                         <!-- CATEGORÍA 3: CLAVES DIGITALES -->
-                        <section id="tienda">
+                        <section class="tienda">
                             <h2>Claves Digitales</h2>
                                 
-                            <article class="tarjeta producto-fila" id="digitales">
+                            <article class="tarjeta producto-fila digitales">
                                 <img class="foto-producto" src="../Imagenes/hollow.jpg" alt="Hollow Knight">
                                 <div class="datos-producto">
                                     <span class="etiqueta digital">Digital</span>
@@ -318,7 +310,7 @@
                                 </div>
                             </article>
                             
-                            <article class="tarjeta producto-fila" id="digitales">
+                            <article class="tarjeta producto-fila digitales">
                                 <img class="foto-producto" src="../Imagenes/stardew.jpg" alt="Stardew Valley">
                                 <div class="datos-producto">
                                     <span class="etiqueta digital">Digital</span>
@@ -333,7 +325,7 @@
                                 </div>
                             </article>
                             
-                            <article class="tarjeta producto-fila" id="digitales">
+                            <article class="tarjeta producto-fila digitales">
                                 <img class="foto-producto" src="../Imagenes/vampire.webp" alt="Vampire Survivors">
                                 <div class="datos-producto">
                                     <span class="etiqueta digital">Digital</span>
@@ -348,7 +340,7 @@
                                 </div>
                             </article>
                             
-                            <article class="tarjeta producto-fila" id="digitales">
+                            <article class="tarjeta producto-fila digitales">
                                 <img class="foto-producto" src="../Imagenes/sea.webp" alt="Sea of Thieves">
                                 <div class="datos-producto">
                                     <span class="etiqueta digital">Digital</span>
@@ -363,7 +355,7 @@
                                 </div>
                             </article>
                             
-                            <article class="tarjeta producto-fila" id="digitales">
+                            <article class="tarjeta producto-fila digitales">
                                 <img class="foto-producto" src="../Imagenes/amongus.jpg" alt="Among Us">
                                 <div class="datos-producto">
                                     <span class="etiqueta digital">Digital</span>
@@ -378,7 +370,7 @@
                                 </div>
                             </article>
                             
-                            <article class="tarjeta producto-fila" id="digitales">
+                            <article class="tarjeta producto-fila digitales">
                                 <img class="foto-producto" src="../Imagenes/hifi.jpg" alt="Hi-Fi RUSH">
                                 <div class="datos-producto">
                                     <span class="etiqueta digital">Digital</span>
@@ -393,7 +385,7 @@
                                 </div>
                             </article>
                             
-                            <article class="tarjeta producto-fila" id="digitales">
+                            <article class="tarjeta producto-fila digitales">
                                 <img class="foto-producto" src="../Imagenes/rocket.jpg" alt="Rocket League (Lote de 1100 Créditos)">
                                 <div class="datos-producto">
                                     <span class="etiqueta digital">Digital</span>
@@ -408,7 +400,7 @@
                                 </div>
                             </article>
                             
-                            <article class="tarjeta producto-fila" id="digitales">
+                            <article class="tarjeta producto-fila digitales">
                                 <img class="foto-producto" src="../Imagenes/rust.avif" alt="Rust">
                                 <div class="datos-producto">
                                     <span class="etiqueta digital">Digital</span>
@@ -509,9 +501,7 @@
         </section>
     </main>
 
-    <!-- =========================================================
-         PIE DE PÁGINA (Enlaces legales y políticas)
-         ========================================================= -->
+    <!-- PIE DE PÁGINA (Enlaces legales y políticas) -->
     <footer id="contacto">
         <div class="footer-links">
             <a href="../Politicas/politica-privacidad.txt">Política de Privacidad</a>
