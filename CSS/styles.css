@@ -128,10 +128,6 @@ nav a:hover {
     animation: moverCarrusel 24s infinite ease-in-out;
 }
 
-.carrusel:hover .pista-carrusel {
-    animation-play-state: paused;
-}
-
 .diapositiva {
     position: relative;
     width: 25%;
@@ -187,6 +183,7 @@ nav a:hover {
     width: 100%;
     height: 100%;
     z-index: 1;
+    pointer-events: none;
     background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 40%, rgba(255,255,255,0) 75%);
 }
 
@@ -309,7 +306,7 @@ footer {
     background-color: #081c3a;
     border-top: 3px solid #f07a1f;
     color: #cbd5e1;
-    margin-top: 3rem;
+
 }
 
 .footer-links {
@@ -330,8 +327,6 @@ footer {
 
 /* PÁGINA DE CONTACTO Y FORMULARIOS */
 .contacto {
-    padding: 80px 20px;
-	background-color: #f1f5f9;
     color: #0f172a;
 }
 
@@ -484,6 +479,56 @@ background-color: #1d4ed8;
 
 .redes-icons a:hover {
     color: #93c5fd;
+}
+
+/* TABLA HORARIO DE LA TIENDA */
+
+
+.horario-tienda {
+    margin-top: 25px;
+}
+
+
+.horario-tienda h3 {
+    color: #e63946;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 21px;
+}
+
+
+.horario-tienda table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.horario-tienda th {
+    background-color: #2563EB;
+    color: white;
+    padding: 12px;
+}
+
+
+.horario-tienda td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+
+.horario-tienda tr:hover {
+    background-color: #f2f2f2;
+}
+
+
+.horario-tienda tr:last-child td {
+    color: #e63946;
+    font-weight: bold;
 }
 
 /* Iconos de Redes Sociales (Tamaño grande solicitado) */
@@ -821,6 +866,60 @@ background-color: #1d4ed8;
 
 .volver-reservas:hover {
     color: #f07a1f;
+}
+
+/* TABLA COMPARATIVA GTA */
+
+
+.comparacion-gta {
+    background-color: #111;
+    color: white;
+    padding: 50px 8%;
+    text-align: center;
+}
+
+
+.comparacion-gta h2 {
+    color: #e63946;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+
+.comparacion-gta p {
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+
+.comparacion-gta table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1c1c1c;
+}
+
+
+.comparacion-gta th {
+    background-color: #e2b8d5;
+    color: white;
+    padding: 16px;
+}
+
+
+.comparacion-gta td {
+    padding: 14px;
+    border: 1px solid #444;
+}
+
+
+.comparacion-gta tr:hover {
+    background-color: #333;
+}
+
+
+.comparacion-gta tr:last-child td {
+    color: #ff5252;
+    font-weight: bold;
 }
 
 /* MEDIA QUERIES (RESPONSIVE) */

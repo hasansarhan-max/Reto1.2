@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <!-- CONFIGURACIÓN Y METADATOS DEL DOCUMENTO -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PlayMarket</title>
-    <link rel="icon" href="../Imagenes/cyberpunk">
+    <link rel="icon" type="image/png" href="../Imagenes/icono.png">
     <link rel="stylesheet" href="../CSS/styles.css">
 </head>
 
@@ -44,7 +44,9 @@
                 <div class="pista-carrusel">
                     <!-- DIAPOSITIVA 1 -->
                     <article class="diapositiva diapositiva-gta">
-                        <img class="fondo-destacado" src="../Imagenes/gta6.jpg" alt="Grand Theft Auto VI">
+						<map name="gta">
+							<area shape="rect" coords="0,0,1920,1080" href="../HTML/formulario-reserva.html" alt="../HTML/formulario-reserva.html" />
+                        <img class="fondo-destacado" src="../Imagenes/gta6.jpg" alt="Grand Theft Auto VI" usemap="#gta">
                         <div class="texto-destacado">
                             <h3>Grand Theft Auto VI</h3>
                             <p class="plataforma">PlayStation 5</p>
@@ -171,7 +173,7 @@
                     <section class="tienda">
                         <h2>Juegos Fisicos</h2>
                 
-                        <article class="tarjeta producto-fila fisicos">
+                        <article class="tarjeta producto-fila" id="fisicos">
                             <img class="foto-producto" src="../Imagenes/gta6disco.webp" alt="Grand Theft Auto VI">
                             <div class="datos-producto">
                                 <span class="etiqueta fisico">Físico</span>
@@ -295,7 +297,7 @@
                         <section class="tienda">
                             <h2>Claves Digitales</h2>
                                 
-                            <article class="tarjeta producto-fila digitales">
+                            <article class="tarjeta producto-fila" id="digitales">
                                 <img class="foto-producto" src="../Imagenes/hollow.jpg" alt="Hollow Knight">
                                 <div class="datos-producto">
                                     <span class="etiqueta digital">Digital</span>
